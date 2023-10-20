@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/papillon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/Istyles.css" />
+	<link rel="stylesheet" type="text/css" href="css/cachampagne/stylesheet.css" />
+
+	 <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+ 
+	<!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrapSlate.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+  
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+   <style type="text/css">
+      body { padding-top: 10px; }
+      [class*="col-"] { margin-bottom: 20px; }
+      img { width: 100%; }
+      .well { padding: 20px; }
+      a:active, a:focus { outline:none; }
+      .inline-form input {
+        display: inline-block;
+        width: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+	<header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Portfolio</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="ecv.html">Ecv</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="contact.html">Commentaire</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	</header>
+
+    <div class="container">
+      <div class="starter-template">
+	  <!--  canvas  -->
+	  	<div id="playground">
+
+		<canvas id="dessin"  width="auto" height="350px">
+		Votre navigateur ne supporte pas canvas
+		</canvas>
+				</div>
+
+      </div>
+    </div>
+	<script  src="js/jquery-ui-themes-1.12.1/jquerypp.js" ></script>
+
+	
+	<script src="bootstrapMaster/dist/js/bootstrap.min.js"></script>
+
+	
+	<script src="gameQuery/tools/tilemapEditor/js/jquery-1.7.1.js"></script>
+	<script src="gameQuery/jquery.gamequery.js"></script>
+
+
+	<script  src="https://code.jquery.com/jquery-1.11.1.js"  integrity="sha256-MCmDSoIMecFUw3f1LicZ/D/yonYAoHrgiep/3pCH9rw="  crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript"><!--//--><![CDATA[//><!--
+	function afficheMenu(obj){ var idMenu = obj.id; var idSousMenu = 'sous' + idMenu; var sousMenu = document.getElementById(idSousMenu); /*****************************************************/ /** si le sous-menu correspondant au menu cliqué **/ /** est caché alors on l'affiche, sinon on le cache **/ /*****************************************************/ if(sousMenu.style.display == "none"){ sousMenu.style.display = "block"; } else{ sousMenu.style.display = "none"; } }//--><!]]>
+	</script>  
+      
+	<script>
+	var sun = new Image();
+	var moon = new Image();
+	var earth = new Image();
+
+	function init(){
+	sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
+	moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
+	earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+	window.requestAnimationFrame(draw);
+	}
+
+	/* canvas */
+    var monCanvas = document.getElementById('dessin');
+    if (monCanvas.getContext){
+        var ctx = monCanvas.getContext('2d');
+        /* incrément */
+        var i=0;
+    } else {
+        alert('canvas non supporté par ce navigateur');
+    }
+	
+	function draw() {
+	var ctx = document.getElementById('dessin').getContext('2d');
+
+	ctx.globalCompositeOperation = 'destination-over';
+	ctx.clearRect(0,0,350,350); // effacer le canvas
+
+	ctx.fillStyle = 'rgba(0,0,0,0.4)';
+	ctx.strokeStyle = 'rgba(0,153,155,0.4)';
+	ctx.save();
+	ctx.translate(150,150);
+
+
+	// Terre
+	var time = new Date();
+	ctx.rotate( ((2*Math.PI)/60)*time.getSeconds() + ((2*Math.PI)/60000)*time.getMilliseconds() );
+	ctx.translate(65,0);
+	ctx.fillRect(0,-12,30,20); // Ombre
+	ctx.drawImage(earth,-12,-12);
+
+	// Lune
+	ctx.save();
+	ctx.rotate( ((2*Math.PI)/6)*time.getSeconds() + ((2*Math.PI)/6000)*time.getMilliseconds() );
+	ctx.translate(0,28.5);
+	ctx.drawImage(earth,-3.5,-3.5);
+	ctx.restore();
+
+
+
+	// planete
+	ctx.save();
+	ctx.rotate( ((2*Math.PI)/6)*time.getSeconds() + ((2*Math.PI)/6000)*time.getMilliseconds() );
+	ctx.translate(80,0);
+	ctx.drawImage(moon,-12,-12);	
+	ctx.restore();
+
+
+
+	ctx.restore();
+  
+	ctx.beginPath();
+	ctx.arc(150,150,65,0,Math.PI*2,false); // Orbite terrestre
+	ctx.arc(150,150,110,0,Math.PI*2,false); // Orbite planete
+
+	ctx.stroke();
+ 
+	ctx.drawImage(sun,0,0,300,300);
+
+	window.requestAnimationFrame(draw);
+	}
+
+	init();
+
+	</script>
+	<script type="text/javascript">
+		
+	var $playground = $('#playground'), // on entre l'objet jQuery dans une variable pour éviter de l'appeler plusieurs fois
+		h = auto,
+		w = auto; // on définit les dimensions du playground
+
+	$playground.playground({
+		height : h,
+		width : w // puis on passe ces variables en paramètre
+	});
+
+	// Exemple d'ajout de plusieurs groupes à la suite
+	$.playground()
+		.addGroup('background', { height : h, width : w }) // ajout du groupe "background"
+		.end() // on revient à l'objet playground
+		.addGroup('player', { height : h, width : w }); // ajout du groupe "player"
+
+	 // première instance
+	var image1 = new $.gameQuery.Animation({
+		imageURL : "gameQuery-master/demos/3/background1.png"
+	});
+
+	// seconde instance
+	var image2 = new $.gameQuery.Animation({
+		imageURL : "gameQuery-master/demos/3/background2.png"
+	});
+
+	// troisième instance
+	var image3 = new $.gameQuery.Animation({
+		imageURL : "gameQuery-master/demos/3/background3.png"
+	});
+
+
+
+	$('#background') // on accède à notre groupe
+		.addSprite('image1', { // on ajoute un sprite
+			animation : image1, // premier objet instancié
+			height : h,
+			width : w,
+			// nous créons ici un arrière-plan, les dimensions sont donc égales à celles du playground
+		})
+		.addSprite('image2', { // on répète l'opération
+			animation : image2,
+			height : h,
+			width : w
+		})
+		.addSprite('image3', { // on répète l'opération
+			animation : image3,
+			height : h,
+			width : w
+		});
+
+	 
+	 $.playground()
+		.registerCallback(function(){
+		var left = parseInt( $("#image1").css("left") ) - 1; // l'image de fond se déplace lentement, on la déplace donc de 1 pixel à chaque intervalle
+			if(left < 0 - w) left = w;
+			$("#image1").css("left", left);
+
+		left = parseInt( $("#image2").css("left") ) - 3; // l'image du milieu se déplace plus rapidement, on la déplace de 3 pixels à chaque intervalle
+			if(left < 0 - w) left = w;
+			$("#image2").css("left", left);
+
+		left = parseInt( $("#image3").css("left") ) - 5; // l'image de devant se déplace rapidement, on la déplace de 5 pixels à chaque intervalle
+			if(left < 0 - w) left = w;
+			$("#image3").css("left", left);
+		}, 30); // enfin, on définit l'intervalle de temps à 30ms
+
+
+	$.playground().startGame(); // on lance le jeu !
+
+	</script>
+  </body>
+</html>

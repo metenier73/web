@@ -1,0 +1,118 @@
+/* Extra small devices (phones, up to 480px) */
+
+/* No media query since this is the default in Bootstrap */
+@media (min-width: @screen-phones) {
+  .container {
+    max-width: auto;
+  }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-tablet) {
+  .container {
+    max-width: auto;
+  }
+}
+
+/* Medium devices (tablets, 992px and up) */
+@media (min-width: @screen-desktop) {
+  .container {
+    max-width: auto;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-large-desktop) {
+  .container {
+    max-width: auto;
+  }
+}
+
+/* Sur tous types d'écrans orientés verticalement */
+@media all and (orientation: portrait){
+  .container {
+    max-width: auto;
+  }
+}
+
+
+/* Extra small devices (phones, up to 480px) */
+@media (min-width: @screen-screen-s) { 
+
+.container {
+    max-width: auto;
+  } 
+}
+
+ ul {
+	display:inline-table;
+	min-width:auto;	
+	margin: auto;
+	padding:auto;
+	list-style-type:none;
+	position:left;
+	height:auto;
+	text-transform:uppercase;
+	font-size:11px;
+    width:auto;
+       
+	
+}
+
+ ul li a:hover{
+	color:#888888;
+	background:transparent url("image/hmenu-sel.jpg") repeat-x top right
+}
+
+li {
+	 padding:5px;	 
+}
+
+html {
+	background:#888888; /*#FFFF;*/
+	overflow: auto;
+	margin:auto;
+	padding:auto;
+	width:auto;
+	text-align:center;
+
+
+}
+body {
+	width:auto;	
+	font-family: 'cac_champagneregular', 'Play', sans-serif;
+	font-style: normal ;
+	font-weight: normal ;
+	background: #888888;
+	overflow: auto;
+	display:block;	
+
+}
+
+
+
+nav {
+	display: flex-inline-table;
+	padding:15px;
+	height:auto;
+	width:auto;	
+	text-align:center;
+	font-size: 15px;
+	font-family: Helvetica, 'Play', sans-serif;
+
+}
+
+#menu{ display: flex-inline-table; width: auto; height : auto; margin: auto;text-align:center; }
+#sousmenu1{ display: flex-inline-table; width: auto; height : auto; margin: auto;text-align:left; }
+
+
+
+
+
+
+
+.container {
+  margin: 1rem;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  border: 0.1rem solid #888888; }
+}
+

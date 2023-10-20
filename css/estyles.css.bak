@@ -1,0 +1,358 @@
+
+/* @font-face { */
+    /* font-family: 'cac_champagneregular'; */
+    /* src: url('cac_champagne-webfont.eot'); */
+    /* src: url('cac_champagne-webfont.eot?#iefix') format('embedded-opentype'), */
+         /* url('cac_champagne-webfont.woff2') format('woff2'), */
+         /* url('cac_champagne-webfont.woff') format('woff'), */
+         /* url('cac_champagne-webfont.ttf') format('truetype'), */
+         /* url('cac_champagne-webfont.svg#cac_champagneregular') format('svg'); */
+    /* font-weight: normal; */
+    /* font-style: normal; */
+/* } */
+
+
+
+/* Extra small devices (phones, up to 480px) */
+/* No media query since this is the default in Bootstrap */
+@media (min-width: @screen-phones) {
+  .container {
+    max-width: auto;
+  }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-tablet) {
+  .container {
+    max-width: auto;
+  }
+}
+
+/* Medium devices (tablets, 992px and up) */
+@media (min-width: @screen-desktop) {
+  .container {
+    max-width: auto;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-large-desktop) {
+  .container {
+    max-width: auto;
+  }
+}
+.container {
+  display:flex-inline-table;
+  margin: 1rem ;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  border: 0.1rem solid transparent; }
+}
+
+
+
+/* .form__field label { */
+  /* color: #888888; */
+  /* display:flex-inline-table; */
+  /* font-size: 2rem; */
+  /* line-height: 2rem; */
+  /* padding-top: 1.5rem; */
+/* } */
+
+/* @media all and (max-device-width: 320px) { */
+   /* .container { */
+    /* max-width: auto; */
+  /* } */
+/* } */
+
+/* @media all and (max-device-width: 480px) { */
+   /* .container { */
+    /* max-width: auto; */
+  /* } */
+/* } */
+
+/* @media (min-width: 900px) { */
+  /* .container { */
+    /* max-width: auto; */
+  /* } */
+/* } */
+
+ 
+
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 1024px et 1280px */
+/* @media all and (min-width: 1024px) and (max-width: 1280px) { */
+/* .container { */
+    /* max-width: auto; */
+  /* } */
+/* } */
+
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
+/* @media screen and (max-width: 1280px) { */
+/* .container { */
+    /* max-width: auto; */
+  /* } */
+/* }  */
+
+/* Sur les téléviseurs */
+/* @media tv */
+
+/* Sur tous types d'écrans orientés verticalement */
+@media all and (orientation: portrait) {
+  .container {
+    max-width: auto;
+  }
+}
+
+a:link, a:visited {
+	color:#88888;
+	text-decoration:none;
+}
+
+a:active /* Quand le visiteur clique sur le lien */
+{
+    background-color: transparent;
+}
+
+a:hover {
+	color:#888888;
+	text-decoration:underline;
+}
+
+#menu{ display: flex-inline-table; width: auto; height : auto; margin: auto;text-align:center; }
+#sousmenu1{ display: flex-inline-table; width: auto; height : auto; margin: auto;text-align:left; }
+
+/* #section{ */
+	/* text-align:left; */
+	/* font-family: Helvetica, Arial, sans-serif ; */
+	
+	/* font-size:12px  ; */
+	/* text-align:left; */
+	/* margin-top:-18px; */
+/* } */
+
+/* header { */
+   /* text-align:center; */
+	/* font-family: Helvetica, Arial, sans-serif ; */
+	/* font-size:12px  ;   */
+	/* padding-bottom:-10px; */
+
+/* } */
+
+article{
+	display:flex-inline-table;
+	text-align:left;
+	font-family: Helvetica, Arial, sans-serif ;
+	margin-top:-18px;
+	padding-bottom:10px;
+	font-size:12px  ;
+}
+
+aside {
+	display:flex-inline-table;
+	text-align:left;
+	font-family: Helvetica, Arial, sans-serif ;
+	padding-bottom:90px;
+	font-size:12px  ;
+}
+html {
+
+	background:#888888; /*#FFFF;*/
+	overflow: auto;
+	margin:auto;
+	padding:auto;
+	width:auto;
+	text-align:center;
+
+}
+
+body {
+	display:flex; 
+	width:auto;	
+	color:#888888;	
+	font-family: 'cac_champagneregular', Helvetica, Arial, sans-serif ;
+	padding:auto;
+
+}
+#bg {
+
+	background:transparent ;
+ 	display:flex-inline-table;	
+	font-family: Helvetica, Arial,'Play', sans-serif;
+    text-align:center;
+    color:#888888;
+    width:auto;
+	font-size:12px  ;
+	margin-top:-1px;
+	margin-left:auto;
+	padding-right:auto;
+	padding-top:55px;
+	
+
+}
+
+#bg1 {
+
+	background:transparent ;
+ 	display:flex-inline-table;	
+	font-family: Helvetica, Arial,'Play', sans-serif;
+    text-align:left;
+    color:#888888;
+    width:auto;
+	font-size:12px  ;
+
+	margin-left:18px;
+	padding-right:auto;
+	padding-top:80px;
+	
+}
+
+#bar {
+	
+  /* padding-top:5px; */
+  /* margin-left:-5px; */
+  /* margin-right:-5px; */
+  /* margin-bottom:10px; */
+  width: auto;
+  height: auto;
+  text-align:left;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #888888;
+  color:#424242;
+}
+
+mark{
+	 color: clear green;
+}
+
+p {
+	text-align:left;
+	padding-left:200px;
+	padding-bottom:5px;
+}
+
+h3 {
+	font-family: 'cac_champagneregular', Helvetica, Arial, sans-serif ;
+	color:#888888;
+	clear:both;
+	text-decoration :blink;
+	text-align:center;
+}
+
+h4 {
+	
+	font-family: 'cac_champagneregular', Helvetica, Arial, sans-serif ;
+	color:#888888;
+	clear:both;
+	text-decoration :blink;
+	text-align:center;
+ 
+}
+h5 {
+	font-family: 'cac_champagneregular', Helvetica, Arial, sans-serif ;
+	color:#888888;
+	font-size:25px ;
+	clear:both;
+	text-decoration :blink;
+	text-align:center;       
+}
+
+h6 {
+	font-family: 'cac_champagneregular', Helvetica, Arial, sans-serif ;
+	color:#888888;
+	font-size:13px ;
+	clear:both;
+	padding:auto;
+	text-decoration :blink;
+	text-align:center;
+	      
+}
+
+
+
+#p1 {
+	font-family: Helvetica, Arial, sans-serif ;
+	margin-bottom:auto;
+	font-size:12px;
+	color:#888888;
+	letter-spacing: normal ;
+	padding:auto;
+	text-align:left;
+
+}
+
+
+
+nav {
+	display: flex-inline-table;
+	flex-direction: column;
+	padding:15px;
+	height:auto;
+	width:auto;	
+	text-align:center;
+	font-size: 15px;
+	font-family: Helvetica, 'Play', sans-serif;
+
+}
+
+
+ ul {
+	display:inline-table;
+	min-width:auto;	
+	margin: auto;
+	padding:auto;
+	list-style-type:none;
+	position:left;
+	height:auto;
+	text-transform:uppercase;
+	font-size:11px;
+    width:auto;
+       
+	
+}
+
+
+
+
+ ul li a:hover{
+	color:#888888;
+	background:transparent url("image/hmenu-sel.jpg") repeat-x top right
+}
+	
+ li {
+	 padding:5px;	 
+ }
+
+
+img{
+display: flex-inline-table;
+max-width: auto;
+height: auto;
+padding:6.5px;
+
+}
+
+
+
+
+
+meter {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  margin: 0 auto 0.1em;
+  width: 80%;
+  height: 0.5em;
+
+  /* Applicable only to Firefox */
+  background: none;
+  background-color: whiteSmoke;
+ 
+}
+
+meter::-webkit-meter-bar {
+  background: none;
+  background-color: whiteSmoke;
+ 
+}
+
