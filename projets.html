@@ -1,281 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="icon" href="images/papillon.ico" />
-  <link rel="stylesheet" href="css/style.css" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=firefox">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="portfolio">
+	<meta name="author" content="METENIER Myriam">
+	<link rel="icon" href="images/papillon.ico" />
 
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
-  <title>Portfolio Informatique</title>
+	<link rel="stylesheet" type="text/css" href="css/P4styles.css" />
 
-  <title>Portfolio Informatique</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrapCyborg.min.css" />
+	<!-- Custom styles for this template -->
+	<link href="css/starter-template.css" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="css/cacchampagne/stylesheet.css" type="text/css" />
+	<title>CV électronique</title>
+	<style type="text/css">
+		body {
+			margin-top: -100px;
+			padding: -10px;
+		}
+
+		[class*="col-"] {
+			margin-bottom: auto;
+		}
+
+		img {
+			width: 20%;
+		}
+
+		.container {
+			margin-left: auto;
+		}
+
+		a:active,
+		a:focus {
+			outline: none;
+		}
+
+		.inline-form input {
+			display: inline-block;
+			width: 100%;
+		}
+	</style>
 </head>
 
 <body>
-  <div class="bg-dark">
-    <div class="container">
-      <div class="row">
-        <nav class="col navbar navbar-expand-lg navbar-dark">
-          <a class="navbar-brand" href="index.html">
-            <!--  <img src="images/logo.png" width="50" height="50" alt="Info Logo" />-->
-            <span class="material-symbols-outlined">
-              psychology
-            </span>
-            Portfolio Informatique
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div id="navbarContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Accueil</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="formation.html">Formation</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="projets.html">Projets</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="experience.html">Expèrience Pro</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </div>
-  <div class="jumbotron">
-    <div class="row my-3">
-      <div class="col">
-        <h1>Projets Perso ...</h1>
-      </div>
-    </div>
-    <div class="row mb-3">
-      <div class="col">
-        <input class="form-control" id="searchInput" type="text" placeholder="Search..">
-      </div>
-    </div>
-    <div class="row" id="lessonList">
+	<header>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+						aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">Portfolio</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="ecv.html">Ecv</a></li>
+						<li class="active"><a href="projets.html">Projets</a></li>
+						<li><a href="contact.html">Commentaire</a></li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</nav>
+	</header>
 
-      <div class="col-12 col-lg-4">
-        <div class="card mb-4 mb-lg-0 border-light shadow-sm">
-          <img src="images/ecv.png" alt="Animations CSS modernes" class="card-img-top w-25">
-          <div class="card-body">
-            <h4 class="card-title">Développement en Html, Css & Bootstrap</h4>
-            <p class="card-text">Site portfolio Informatique.
-            </p>
-            <a href="https://metenier73.github.io/web/" class="btn btn-primary stretched-link"
-              onclick="window.open(this.href);return false ">Ecv</a>
+<div id="grid">
+	<div class="container">
+		<div class="row">
+			<div class="panel panel-default col-lg-12">
+				<h3> Projets</h3></br>
+				<div class="element">
+					<ul>
+						<h5><em>Dépot </em></h5>
+						<li>DropBox(<a href="https://www.dropbox.com/sh/0hhz4li25hu0akx/AACPOrNLQu8gCOo1o0HodZM1a?dl=0"
+								onclick="window.open(this.href);return false"> (7isiBox & Culture Montagnarde)</a>)</li>
+						<li>GitHub (<a href="https://github.com/metenier73/PortfolioInfo.git"
+								onclick="window.open(this.href);return false">Portfolio </a>,
+							<!-- <a href="https://github.com/metenier/GBS" -->
+								<!-- onclick="window.open(this.href);return false">GBS</a>, -->
+							<a href="https://github.com/metenier73/pythonScript.git"
+								onclick="window.open(this.href);return false" title="Script Python" >Boite à Outils pour Windows</a>)
+						</li>
+						<li>Galery (<a href="https://www.flickr.com/gp/ridesnow/Z8R7Ay"
+								onclick="window.open(this.href);return false">Photo </a>)</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="panel panel-default col-lg-12">
 
 
+				<h4><em>Documentation numérique </em></h4>
+				<div class="element">
+					<ul>
+					<li>Veille technologique (<a href="http://meteniermyriam.wixsite.com/veille" onclick="window.open(this.href);return false">Ma
+						Veille technologique Java</a>)</li>
+					<!-- <div class="infoBulle"> -->
+						<!-- <p>Veille technologique En JAVA</p> -->
+					<!-- </div> -->
 
-          </div>
-        </div>
-      </div>
+					<li>Wiki(<a href="https://fr.wikipedia.org/wiki/Utilisateur:Meteniermyriam/Brouillon"
+						onclick="window.open(this.href);return false">Wikisupport</a>)</li>
 
+					<!-- <div class="infoBulle"> -->
+						<!-- <img src="./images/images/wiki.jpg" alt="resurgences" title="Cliquez pour agrandir" /> -->
+					<!-- </div> -->
 
+					</ul>
+				</div>
 
-      <div class="col-12 col-lg-4">
-        <div class="card mb-4 mb-lg-0 border-light shadow-sm">
-          <img src="images/snapface" alt="Animations CSS modernes" class="card-img-top w-25">
-          <div class="card-body">
-            <h4 class="card-title">Développement en Html, Css,JavaScript, JQuery & Bootstrap </h4>
-            <p class="card-text">Site portfolio Ski & Snowboard.
-            </p>
+			</div>
 
-            <a href="https://metenier73.github.io/PortfolioSki/" class="btn btn-primary stretched-link"
-              onclick="window.open(this.href);return false">Portfolio Ski</a>
+		</div>
 
-          </div>
-        </div>
-      </div>
+		<div class="row">
+			<div class="panel panel-default col-lg-12">
+				<h3><em>Sites</em></h3>
+				<div class="element">
+					<ul>
+						<h6> <u>CMS : </u></h6>
+						<li><a href="https://meteniermyriam.wixsite.com/portfolio" title="Portfolio informatique"
+								onclick="window.open(this.href);return false">Portfolio Informatique</a></li>
+						<li><a href="https://meteniermyriam.wixsite.com/snowride73" title="Portfolio esf"
+								onclick="window.open(this.href);return false">RideSnow</a></li>
+						<li><a href="https://meteniermyriam.wixsite.com/mapizza" title="Pizza maison"
+								onclick="window.open(this.href);return false">Pizza Maison</a></li>
+					</ul>
 
+					<ul>
+						<h6> <u> Ftp & Github </u></h6>
 
-<div class="col-12 col-lg-4">
-        <div class="card mb-4 mb-lg-0 border-light shadow-sm">
-          <img src="images/snapface.png" alt="Projet Angular" class="card-img-top w-25">
-          <div class="card-body">
-            <h4 class="card-title">Développement Angular</h4>
-            <p class="card-text">Snapface.
-            </p>
+ 						<li><a href="https://metenier73.github.io/PortfolioInfo/" alt="Bootstrap" title="Portfolio informatique Bootstrap, jquery"
+								onclick="window.open(this.href);return false">Portfolio Informatique</a></li>
 
-            <a href="https://metenier73.github.io/snapface/ " class="btn btn-primary stretched-link"
-              onclick="window.open(this.href);return false">Snapface</a>
-
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-
-
-      <div class="col-12 col-lg-4">
-        <div class="card mb-4 mb-lg-0 border-light shadow-sm">
-          <img src="images/WIXINFO.PNG" alt="CMS WIX" class="card-img-top w-25">
-          <div class="card-body">
-            <h4 class="card-title">CMS - Portfolio Informatique</h4>
-            <p class="card-text">Développement avec WIX : site réalisez avec un peu de programmation.</p>
-            <a href="https://meteniermyriam.wixsite.com/portfolio" class="btn btn-primary stretched-link"
-              onclick="window.open(this.href);return false">Portfolio Informatique</a>
-          </div>
-        </div>
-      </div>
+						<li><a href="https://metenier73.github.io/PortfolioSki/" title="Portfolio ski Bootstrap, jquery"
+								onclick="window.open(this.href);return false">Portfolio ski & snowboard </a></li>
 
 
+						<li><a href="https://metenier73.github.io/snapface/" title="Portfolio ski Bootstrap, jquery"
+								onclick="window.open(this.href);return false">Projet Angular </a></li>
 
-      <div class="col-12 col-lg-4">
-        <div class="card mb-4 mb-lg-0 border-light shadow-sm">
-          <img src="images/SKIWIX.PNG" alt="CMS WIX" class="card-img-top w-25">
-          <div class="card-body">
-            <h4 class="card-title">CMS - Site Monitrice de ski & Snowboard </h4>
-            <p class="card-text">Développement avec WIX : site réalisez rapidement sans programmation.</p>
-            <a href="https://meteniermyriam.wixsite.com/snowride73" class="btn btn-primary stretched-link"
-              onclick="window.open(this.href);return false">Site Monitrice ski & snowboard</a>
-          </div>
-        </div>
-      </div>
+						<!-- <li><a href="http://mmetenier.free.fr/PortfolioInfo/" alt="Bootstrap" title="Portfolio informatique Bootstrap, jquery"
+								onclick="window.open(this.href);return false">Portfolio Informatique</a></li> -->
+
+						<!-- <li><a href="http://mmetenier.free.fr/PortfolioSki/" title="Portfolio ski Bootstrap, jquery"
+								onclick="window.open(this.href);return false">Portfolio ski & snowboard </a></li> -->
 
 
+						<!-- <a href="http://maboutiqueperso/version%20finale/" title="Désolé pas encore en ligne " onclick="window.open(this.href);return false">Ma Boutique Perso </a><br/> -->
 
-      <div class="col-12 col-lg-4">
-        <div class="card mb-4 mb-lg-0 border-light shadow-sm">
-          <img src="images/pizza.PNG" alt="CMS WIX" class="card-img-top w-25">
-          <div class="card-body">
-            <h4 class="card-title">CMS - Pizzeria </h4>
-            <p class="card-text">Développement avec WIX : site multi-plateforme sans programmation.</p>
-            <a href="https://meteniermyriam.wixsite.com/mapizza" class="btn btn-primary stretched-link"
-              onclick="window.open(this.href);return false">Site Pizza</a>
-          </div>
-        </div>
-      </div>
+						<!-- <a href="http://monappweb/" title="Désolé pas encore en ligne"  onclick="window.open(this.href);return false">Mon application web </a><br/> -->
+
+						<!-- <a href="http://gbs/" title="Désolé pas encore en ligne" onclick="window.open(this.href);return false"> GBS </a><br/> -->
 
 
+					</ul>
 
 
-      <div class="col-12 col-lg-4">
-        <div class="card mb-4 mb-lg-0 border-light shadow-sm">
-          <img src="images/VEILLE.PNG" alt="CMS WIX" class="card-img-top w-25">
-          <div class="card-body">
-            <h4 class="card-title">CMS - Veille JAVA </h4>
-            <p class="card-text">Développement avec WIX : applications réalisez rapidement sans programmation</p>
-            <a href="https://meteniermyriam.wixsite.com/veille" class="btn btn-primary stretched-link"
-              onclick="window.open(this.href);return false">Veille Java</a>
-          </div>
-        </div>
-      </div>
+					<ul>
+						<h6> <u> Windows </u></h6>
+						<li><a href="AppliTroncCommunMontagne/" title="Tronc commun montagne 'Application Windows' "
+								onclick="window.open(this.href);return false">Culture Montagnarde</a></li>
+					</ul>
+				</div>
+				<!---	<img src="image/dropboxInv.png" alt="Nous &eacute;crire" title="dropbox" width="200" height="200"
+									onemouseover ="this.src='dropBox.png'" onemouseout="this.src='image/dropboxInv.png'"
+								/></a><br /> <br /> <br />-->
+			</div>
+
+		</div>
+
+
+			<script src="https://code.jquery.com/jquery-1.11.1.js"
+				integrity="sha256-MCmDSoIMecFUw3f1LicZ/D/yonYAoHrgiep/3pCH9rw=" crossorigin="anonymous"></script>
+
+			<!-- Latest compiled and minified JavaScript -->
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+			<script type="text/javascript">< !--//-->
+			< ![CDATA[//><!--
+						function afficheMenu(obj) { var idMenu = obj.id; var idSousMenu = 'sous' + idMenu; var sousMenu = document.getElementById(idSousMenu); /*****************************************************/ /** si le sous-menu correspondant au menu cliqué **/ /** est caché alors on l'affiche, sinon on le cache **/ /*****************************************************/ if (sousMenu.style.display == "none") { sousMenu.style.display = "block"; } else { sousMenu.style.display = "none"; } }//--><!]]>
+			</script>
 
 
 
-      <!-- <div class="col-12 col-lg-4">
-        <div class="card mb-4 mb-lg-0 border-light shadow-sm">
-          <img src="images/lessons/js.jpeg" alt="Programmation JavaScript" class="card-img-top w-25">
-          <div class="card-body">
-            <h4 class="card-title">Programmer avec JavaScript</h4>
-            <p class="card-text">Ce cours est conçu pour vous enseigner les bases du langage de programmation
-              JavaScript.</p>
-            <a href="lesson-1.html" class="btn btn-primary stretched-link">Démarrer l'apprentissage</a>
-          </div>
-        </div>
-      </div>-->
+			<footer class="main_footer center_text ptb_2">
+				<div class="grid-container1">
+					<p>&copy; - Author : metenier myriam
+						<a href="mailto:metenier@yahoo.fr">Ecrivez-moi !</a>
+					</p>
+				</div>
+			</footer>
 
-      <!--Formulaire-->
-      <div class="row">
-        <div class="col">
-          <h3>Parcourez mes sites et faite votre évaluation :</h3>
-          <ul>
-            <li>Combien de temps de visualisation (minutes & second) ;</li>
-            <li>Un commentaire avec point positif & négatif;</li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <hr>
-          <h5><u><em>Commentaire :</em></u> </h5>
-          <form>
-            <div class="form-group mt-3">
-              <label for="timeInput">Temps :</label>
-              <input type="text" class="form-control" id="timeInput" placeholder="mm:ss" aria-describedby="timeHelp">
-            </div>
-            <div class="form-group mt-3">
-              <label for="note">Note :</label>
-              <textarea id="note" rows="5" class="form-control" required></textarea>
-            </div>
-            <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck">
-                  Rendre cette notation publique
-                </label>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Envoyer</button>
-          </form>
-        </div>
-      </div>
-
-
-
-
-
-
-    </div>
-  </div>
-  <div class="bg-light mt-4">
-    <div class="container">
-      <div class="row pt-4 pb-3">
-        <div class="col">
-          <ul class="list-inline text-center">
-            <li class="list-inline-item">
-              <p>&copy; - Author : metenier myriam
-                <a href="mailto:metenier@yahoo.fr">Ecrivez-moi !</a>
-
-              </p>
-            </li>
-            <li class="list-inline-item">&middot;</li>
-            <li class="list-inline-item"><a href="https://www.linkedin.com/in/myriam-metenier-20857a70"
-                target="_blank">Linkedin</a>
-            </li>
-            <li class=" list-inline-item">&middot;</li>
-            <li class="list-inline-item">
-              <a href="https://www.developpez.com/" target="_blank">Actualité Informatique</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-  <script>
-    $(document).ready(function () {
-      $("#searchInput").on("keyup", function () {
-        var value = $(this).val().toLowerCase();
-        $("#lessonList .col-12").filter(function () {
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
-      });
-    });
-  </script>
+</div>
 </body>
 
 </html>
