@@ -73,7 +73,7 @@ a:hover {
 
 .container {
   display:grid;
-  margin-top: auto;
+  margin-top: 2rem ;
   padding-top: 0rem;
   border: 0rem solid transparent;
   margin-bottom:0px;
