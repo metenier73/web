@@ -419,7 +419,7 @@ div
   margin: 0.5rem ;
   padding: 1.5rem 1.5rem 0 0.5rem;
   border: 0.1rem solid transparent;
-  margin-bottom:auto;
+  margin-bottom:15px;
 background-color: #424242;
   }  
 
@@ -432,7 +432,7 @@ background-color: #424242;
     color:#888888;
 	margin-bottom:auto;
 	padding-bottom: auto;
-	margin-left: 95px;
+	margin-left: auto;
 	
 
 }

@@ -414,12 +414,13 @@ div
 .grid-container1 {
   display:grid;
   text-align:center;
- 
+  
+padding-bottom: 0px;  
   
   margin: 0.5rem ;
-  padding: 1.5rem 1.5rem 0 0.5rem;
+  padding: 1.5rem 1.5rem 0.5 1.5rem;
   border: 0.1rem solid transparent;
-  margin-bottom:auto;
+  margin-bottom:15px;
 background-color: #424242;
   }  
 
@@ -430,9 +431,9 @@ background-color: #424242;
 	text-align:center;
     background:transparent ;
     color:#888888;
-	margin-bottom:auto;
-	padding-bottom: auto;
-	margin-left: 95px;
+	margin-bottom:-10px;
+	padding-bottom: -20px;
+	margin-left: 100px;
 	
 
 }
