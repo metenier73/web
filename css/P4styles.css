@@ -118,7 +118,7 @@ body {
   width: 100%;
   color: #888888;
   font-family: "cac_champagneregular", Helvetica, Arial, sans-serif;
-  padding-bottom: 60px;
+  padding-bottom: 55px;
  
   text-align: center;
 }
@@ -318,6 +318,7 @@ ul {
   color: #888888;
   margin-bottom: auto;
   padding-bottom: auto;
+  
 }
 
 #grid {
