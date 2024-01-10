@@ -26,7 +26,8 @@
 		}
 
 		[class*="col-"] {
-			margin-bottom: 0px;
+			margin-bottom: 1px;
+			margin-top: 0px;
 		}
 
 		img {
@@ -153,66 +154,70 @@
 
 				</form>
 			</div>
-		</div>
+		
 
-		<script src="https://code.jquery.com/jquery-1.11.1.js"
-			integrity="sha256-MCmDSoIMecFUw3f1LicZ/D/yonYAoHrgiep/3pCH9rw=" crossorigin="anonymous"></script>
+
+
+			<div class="grid-container">
+				<footer class="main_footer center_text ptb_2 ">
+				
+					<p>&copy; - Author : metenier myriam
+						<a href="mailto:metenier@yahoo.fr">Ecrivez-moi !</a>
+					</p>
+				
+				</footer>
+			</div>
+		</div>
+	</div>
+
+	
+		<script src="https://code.jquery.com/jquery-1.11.1.js" integrity="sha256-MCmDSoIMecFUw3f1LicZ/D/yonYAoHrgiep/3pCH9rw="
+			crossorigin="anonymous"></script>
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<!-- on inclut la bibliothèque depuis les serveurs de Google -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script type="text/javascript">
-		< ![CDATA[//><!--
-					function afficheMenu(obj) {
-						var idMenu = obj.id;
-						var idSousMenu = 'sous' + idMenu; var sousMenu = document.getElementById(idSousMenu);
-	/***/ /** si le sous-menu correspondant au menu cliqué **/
-	/** est caché alors on l'affiche, sinon on le cache **/ /**
-	*/ if (sousMenu.style.display == "none") { sousMenu.style.display = "flex-inline-table"; } else { sousMenu.style.display = "none"; }
-					}//--><!]]>
+				< ![CDATA[//><!--
+				function afficheMenu(obj) {
+					var idMenu = obj.id;
+					var idSousMenu = 'sous' + idMenu; var sousMenu = document.getElementById(idSousMenu);
+					/***/ /** si le sous-menu correspondant au menu cliqué **/
+				/** est caché alors on l'affiche, sinon on le cache **/ /**
+				*/ if (sousMenu.style.display == "none") { sousMenu.style.display = "flex-inline-table"; } else { sousMenu.style.display = "none"; }
+				}//--><!]]>
 		</script>
 
-	
+
 		<script>
-	// Vérification de la longueur du mot de passe saisi
-	document.getElementById("mdp").addEventListener("input", function (e) {
-		var mdp = e.target.value; // Valeur saisie dans le champ mdp
-		var longueurMdp = "faible";
-		var couleurMsg = "red"; // Longueur faible => couleur rouge
-		if (mdp.length >= 8) {
-			longueurMdp = "suffisante";
-			couleurMsg = "green"; // Longueur suffisante => couleur verte
-		} else if (mdp.length >= 4) {
-			longueurMdp = "moyenne";
-			couleurMsg = "orange"; // Longueur moyenne => couleur orange
-		}
-		var aideMdpElt = document.getElementById("aideMdp");
-		aideMdpElt.textContent = "Longueur : " + longueurMdp; // Texte de l'aide
-		aideMdpElt.style.color = couleurMsg; // Couleur du texte de l'aide
-	});
-	
-	// Contrôle du courriel en fin de saisie
-	document.getElementById("email").addEventListener("blur", function (e) {
-		// Correspond à une chaîne de la forme xxx@yyy.zzz
-		var regexCourriel = /.+@.+\..+/;
-		var validiteCourriel = "";
-		if (!regexCourriel.test(e.target.value)) {
-			validiteCourriel = "Adresse invalide";
-		}
-		document.getElementById("aideCourriel").textContent = validiteCourriel;
-	});
+				// Vérification de la longueur du mot de passe saisi
+				document.getElementById("mdp").addEventListener("input", function (e) {
+					var mdp = e.target.value; // Valeur saisie dans le champ mdp
+					var longueurMdp = "faible";
+					var couleurMsg = "red"; // Longueur faible => couleur rouge
+					if (mdp.length >= 8) {
+						longueurMdp = "suffisante";
+						couleurMsg = "green"; // Longueur suffisante => couleur verte
+					} else if (mdp.length >= 4) {
+						longueurMdp = "moyenne";
+						couleurMsg = "orange"; // Longueur moyenne => couleur orange
+					}
+					var aideMdpElt = document.getElementById("aideMdp");
+					aideMdpElt.textContent = "Longueur : " + longueurMdp; // Texte de l'aide
+					aideMdpElt.style.color = couleurMsg; // Couleur du texte de l'aide
+				});
+
+				// Contrôle du courriel en fin de saisie
+				document.getElementById("email").addEventListener("blur", function (e) {
+					// Correspond à une chaîne de la forme xxx@yyy.zzz
+					var regexCourriel = /.+@.+\..+/;
+					var validiteCourriel = "";
+					if (!regexCourriel.test(e.target.value)) {
+						validiteCourriel = "Adresse invalide";
+					}
+					document.getElementById("aideCourriel").textContent = validiteCourriel;
+				});
 		</script>
-
-
-		<footer class="main_footer center_text ptb_2">
-			<div class="grid-container">
-				<p>&copy; - Author : metenier myriam
-					<a href="mailto:metenier@yahoo.fr">Ecrivez-moi !</a>
-
-				</p>
-			</div>
-		</footer>
-	</div>
-</body>
+	</body>
 
 </html>
