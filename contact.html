@@ -83,16 +83,16 @@
 						</div>
 						<legend>Vos coordonnées</legend> <!-- Titre du fieldset -->
 						<label for="societe"> Nom de votre société :</label><br />
-						<input type="text" name="societe" id="societe" size="60" autofocus required /><br />
+						<input type="text" name="societe" id="societe" size="60"   /><br />
 						<label for="civilite">Civilité :</label>
-						<select name="civilite" id="civilite">
+						<select name="civilite" id="civilite" required>
 							<option value="MMe">MME</option>
 							<option value="Mlle">Mlle</option>
 							<option value="Mr">Mr</option>
 						</select>
 						<br />
 						<label for="nom"> Nom :</label>
-						<input type="text" name="nom" id="nom" placeholder="Ex : Zozor" required /><br />
+						<input type="text" name="nom" id="nom" placeholder="Ex : Zozor" autofocus required /><br />
 						<label for="prenom"> Prénom :</label>
 						<input type="text" name="prenom" id="prenom" required /><br />
 						<label for="date"> Date Naissance :</label>
