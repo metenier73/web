@@ -77,11 +77,12 @@ a:hover {
   padding-top: 0.5rem;
   border: 0.5rem solid transparent;
   margin-bottom:0.5rem;
-  overflow: hidden;
-
-
 }
 
+#navbar {
+    overflow: hidden;
+
+}
 .main_footer {
 	background-color: #242424;
 	color: #fff;
@@ -114,6 +115,10 @@ body {
     font: 0px/0 "PT Sans Narrow", sans-serif;
     background: #080e24 url(http://neography.com/experiment/circles/solarsystem/bg.jpg) repeat;
     color: #626668;
+}
+header {
+    overflow: hidden;
+
 }
 
 /* Solar System Styles */
