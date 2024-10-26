@@ -24,16 +24,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 130px
-  margin: 0;
+  height: auto;
+  margin:5px;
   background-color: #f4f4f4;
 			padding-top: 130px;
+			padding-bottom:60px;
 		}
 
 		[class*="col-"] {
-			margin: 5px;
-			margin-top: 5px;
-			padding: 5px;
+			margin: 5px 5px 5px 5px;
+			padding: 5px 5px 5px 5px;
 		}
 
 		img {
