@@ -5,8 +5,7 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=firefox">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width" />
-	<meta name="viewport" content="width=320" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="author" content="METENIER Myriam" />
 	<meta name="keywords" content="développeur full stack, cv" />
 	<meta name="description" content="Mon Cv électronique" />
@@ -14,25 +13,21 @@
 	<meta name="copyright" content="Arrobe" />
 	<link rel="shortcut icon" type="images/x-icon" href="images/papillon.ico" />
 	<link rel="stylesheet" href="css/cacchampagne/stylesheet.css" type="text/css" />
-
 	<link rel="stylesheet" type="text/css" href="css/estyles.css" />
-
 	<link rel="stylesheet" type="text/css" href="css/bootstrapCyborg.min.css" />
 	<!-- Custom styles for this template -->
 	<link href="css/starter-template.css" rel="stylesheet">
-	<!--	<link href="css/structureCssDryBEMsassMixin3.css" rel="stylesheet">
--->
-	<!-- <link rel="stylesheet" media="screen and (max-width: 1014px)" href="petite_resolution.css" />
-    <!-- Pour ceux qui ont une résolution inférieure à 1280px -->
-	<meta name="viewport" content="width=device-width" />
+	
 	<script src="https://code.jquery.com/jquery-1.11.1.js"
 	integrity="sha256-MCmDSoIMecFUw3f1LicZ/D/yonYAoHrgiep/3pCH9rw=" crossorigin="anonymous"></script>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script type="text/javascript">< !--//-->
-< ![CDATA[//><!--
-			function afficheMenu(obj) { var idMenu = obj.id; var idSousMenu = 'sous' + idMenu; var sousMenu = document.getElementById(idSousMenu); /*****************************************************/ /** si le sous-menu correspondant au menu cliqué **/ /** est caché alors on l'affiche, sinon on le cache **/ /*****************************************************/ if (sousMenu.style.display == "none") { sousMenu.style.display = "block"; } else { sousMenu.style.display = "none"; } }//--><!]]>
+<script type="text/javascript">
+function afficheMenu(obj) {
+            const sousMenu = document.getElementById('sous' + obj.id);
+            sousMenu.style.display = (sousMenu.style.display === 'none') ? 'block' : 'none';
+        }
 </script>
 	<title>CV électronique</title>
 	<style type="text/css">
@@ -413,16 +408,16 @@
 								<h6><u>Langage web full stack :</u></h6>
 								<ul>Visual basic <meter max="100" low="25" high="75" optimum="65" value="15"></meter>
 								</ul>
-								<ul>Html/Css/Sass, JavaScript <meter max="100" low="25" high="75" optimum="50"
+								<ul>Html/Css/Sass, JavaScript <meter max="100" low="25" high="75" optimum="65"
 										value="50"></meter></ul>
-								<ul>JavaSE <meter max="100" low="25" high="75" optimum="65" value="15"></meter></ul>
+								<ul>JavaEE <meter max="100" low="25" high="75" optimum="65" value="35"></meter></ul>
 								<ul>Python, Ruby on Rails <meter max="100" low="25" high="75" optimum="65"
 										value="15"></meter></ul>
 								<ul>Seo <meter max="100" low="25" high="75" optimum="50" value="75"></meter></ul>
 
 
 								<h6><u>Versionning :</u></h6>
-								<ul>Git, Github <meter max="100" low="25" high="75" optimum="50" value="50"></meter>
+								<ul>Git, Github <meter max="100" low="25" high="75" optimum="50" value="65"></meter>
 								</ul>
 								<ul>GitLab <meter max="100" low="25" high="75" optimum="65" value="30"></meter></ul>
 
@@ -435,17 +430,17 @@
 
 								<h6><u>Langage Base de donnée</u></h6>
 								<ul>MySql, Sqlite, XML <meter max="100" low="25" high="75" optimum="50"
-										value="50"></meter></ul>
+										value="70"></meter></ul>
 
 								<h6><u>Langage systèmes</u></h6>
 								<ul> C++, C# <meter max="100" low="25" high="75" optimum="65" value="15"></meter></ul>
 
 								<ul> PowerShell <meter max="100" low="25" high="75" optimum="65" value="15"></meter>
 								</ul>
-								<ul>Dos, Bash <meter max="100" low="25" high="75" optimum="65" value="55"></meter></ul>
+								<ul>Dos, Bash <meter max="100" low="25" high="75" optimum="65" value="65"></meter></ul>
 
 								<h6><u>Reseaux</u></h6>
-								<ul>TCP/IP <meter " max=" 100" low="25" high="75" optimum="50" value="35"></meter></ul>
+								<ul>TCP/IP <meter " max=" 100" low="25" high="75" optimum="50" value="85"></meter></ul>
 							</div>
 						</div>
 					</div>
