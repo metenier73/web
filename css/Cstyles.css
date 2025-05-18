@@ -1,0 +1,254 @@
+
+*{
+	margin:0px;
+	padding:0px;
+}
+
+@font-face {
+    font-family: 'cac_champagneregular';
+    src: url('cac_champagne-webfont.eot');
+    src: url('cac_champagne-webfont.eot?#iefix') format('embedded-opentype'),
+         url('cac_champagne-webfont.woff2') format('woff2'),
+         url('cac_champagne-webfont.woff') format('woff'),
+         url('cac_champagne-webfont.ttf') format('truetype'),
+         url('cac_champagne-webfont.svg#cac_champagneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Extra small devices (phones, up to 480px) */
+/* No media query since this is the default in Bootstrap */
+@media (min-width: @screen-phones) {
+  .container {
+	grid-template-columns: 100%;
+	}
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-tablet) {
+  .container {
+  
+	grid-template-columns: 100%;
+  }
+}
+
+/* Medium devices (tablets, 992px and up) */
+@media (min-width: @screen-desktop) {
+  .container {
+   
+	grid-template-columns: 100%;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-large-desktop) {
+  .container {
+    
+	grid-template-columns: 100%;
+  }
+}
+
+/* Sur tous types d'écrans orientés verticalement */
+@media all and (orientation: portrait){
+  .container {
+    max-width: auto;
+  }
+}
+
+
+.container {
+  display:grid;
+  margin: 0.1rem ;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  border: 0.1rem solid transparent; 
+  margin-bottom:-60px;
+ 
+  
+}
+ 
+.grid-container {
+  display:grid;
+  text-align:center; 
+  
+  margin: 0.20rem ;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  border: 0.1rem solid transparent;
+  margin-bottom:0px;
+background-color: #424242;
+  }  
+/* } */
+a:link, a:visited {
+	color:#88888;
+	text-decoration:none;
+}
+
+a:active /* Quand le visiteur clique sur le lien */
+{
+    background-color: blink;
+}
+
+a:hover {
+	color:#888888;
+	text-decoration:underline;
+	transform : scale(1.5);
+	transition: transform 400ms;
+}
+
+#menu{ display: flex-inline-table; width: auto; height : auto; margin: auto; padding: auto; text-align:center; }
+#sousmenu1{ display: flex-inline-table; width: auto; height : auto; margin: auto; padding: auto; text-align:left; }
+
+
+ ul {
+	display:inline-table;
+	min-width:auto;	
+	margin: auto;
+	padding:auto;
+	list-style-type:none;
+	position:left;
+	height:auto;
+	text-transform:uppercase;
+	font-size:11px;
+    width:auto;
+       
+	
+}
+
+
+
+
+ ul li a:hover{
+	color:#888888;
+	background:transparent url("image/hmenu-sel.jpg") repeat-x top right
+}
+
+html {
+	background:#888888; /*#FFFF;*/
+	overflow: auto;
+	margin:auto  ;
+	padding:auto ;
+	width:auto;
+
+
+}
+
+
+body {
+	padding:0px ;
+	
+
+	display:flex-inline-table; 
+	width:auto;	
+	color:#888888;	
+	font-family: 'cac_champagneregular', Helvetica, Arial, sans-serif ;
+
+}
+
+
+#bg {
+
+	background:#888888 ;
+ 	display:block;	
+	background-position: auto;
+	font-family: Helvetica, Arial,'Play', sans-serif;
+    text-align:Left;
+    color:#424242;
+    width:auto;
+	font-size:12px  ;
+	margin:0px;
+	padding-left: 0px;
+
+}
+
+
+
+h1 {
+	
+	font-family: 'cac_champagneregular', Helvetica, Arial, sans-serif ;
+	color:#424242;
+	clear:both;
+	text-decoration :blink;
+	text-align:center;
+ 
+}
+h3 {
+	font-family: 'cac_champagneregular', Helvetica, Arial, sans-serif ;
+	color:#424242;
+	clear:both;
+	text-decoration :blink;
+	text-align:center;
+
+}
+
+
+nav {
+	display: flex-inline-table;
+	flex-direction: column;
+	padding:15px;
+	height:auto;
+	width:auto;	
+	text-align:center;
+	font-size: 15px;
+	font-family: Helvetica, 'Play', sans-serif;
+
+}
+
+#submit-button {
+  background-color: #15DEA5;
+}
+
+.button {
+  background-color: #DB464B;
+}
+
+
+
+
+ 
+
+.form {
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+.form__field label {
+  color: #424242;
+  display: block;
+  font-size: 2rem;
+  line-height: 2rem;
+  padding-top: 1.5rem;
+}
+
+.form__field input {
+  width: 100%;
+  background: #001534;
+  border: 0.1rem solid #15DEA5;
+  padding: 1.5rem;
+  color: #424242;
+}
+
+
+div
+{
+    background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1));
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-large-desktop) { ... }
+
+
+}
+
+.main_footer {
+	background-color: #242424;
+    display:grid;
+	font-family: Helvetica, Arial,'Play', sans-serif;
+	text-align:center;
+    background:transparent ;
+    color:#888888;
+	width: auto;
+
+}
+
+
+
+textarea {
+	resize: none;
+}
