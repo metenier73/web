@@ -27,12 +27,3 @@ Ce projet a été réalisé dans le cadre d’un exercice académique à l’**E
 [![License: CC0](https://img.shields.io/badge/license-CC0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 Ce projet est libre de droits (domaine public - [CC0](https://creativecommons.org/publicdomain/zero/1.0/)).
-
----
-
-## 💡 Suggestions d’amélioration (facultatif)
-
-Si tu veux aller plus loin, tu pourrais ajouter :
-- Une section **Installation / Utilisation**
-- Des captures d’écran
-- Un lien vers une démo en ligne (via Netlify, Ver
