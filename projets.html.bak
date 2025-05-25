@@ -143,9 +143,6 @@
 							<li><a href="https://metenier73.github.io/snapface/" title="Portfolio ski Bootstrap, jquery"
 									onclick="window.open(this.href);return false">Projet Angular </a></li>
 
-							<li><a href="http://mmetenier.free.fr/TestPsycho.html" alt="Bootstrap" title="Test psychologique"
-								onclick="window.open(this.href);return false">Test psychologique</a></li>
-							
 							<!-- <li><a href="http://mmetenier.free.fr/PortfolioInfo/" alt="Bootstrap" title="Portfolio informatique Bootstrap, jquery"
 								onclick="window.open(this.href);return false">Portfolio Informatique</a></li> -->
 
