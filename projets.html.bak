@@ -90,7 +90,7 @@
 									
 									
 								<a href="https://github.com/metenier73/GIEC.git"
-									onclick="window.open(this.href);return false" title="API GIEC avec Django REST">API GIEC (Rapport Climatique) avec Django REST Framework</a>
+									onclick="window.open(this.href);return false" title="API GIEC avec Django REST Framework">API GIEC (Rapport Climatique) avec Django REST</a>
 									
 									)
 							</li>
@@ -136,7 +136,7 @@
 									onclick="window.open(this.href);return false">Pizza Maison</a></li>
 						</ul>
 						<ul>
-							<h6> <u> Ftp & Github </u></h6>
+							<h6> <u>Portfolio : </u></h6>
 
 							<li><a href="https://metenier73.github.io/PortfolioInfo/" alt="Bootstrap"
 									title="Portfolio informatique Bootstrap, jquery"
@@ -146,10 +146,10 @@
 									title="Portfolio ski Bootstrap, jquery"
 									onclick="window.open(this.href);return false">Portfolio ski & snowboard </a></li>
 
-							<li><a href="https://metenier73.github.io/snapface/" title="Portfolio ski Bootstrap, jquery"
+							<li><a href="https://metenier73.github.io/snapface/snapface/facesnaps" title="Portfolio ski Bootstrap, jquery"
 									onclick="window.open(this.href);return false">Projet Angular </a></li>
 
-							<li><a href="http://mmetenier.free.fr/TestPsycho.html" alt="Bootstrap" title="Test psychologique"
+							<li><a href="http://metenier73.github.io/web/TestPsycho.html" alt="Bootstrap" title="Test psychologique"
 								onclick="window.open(this.href);return false">Test psychologique</a></li>
 							
 							<!-- <li><a href="http://mmetenier.free.fr/PortfolioInfo/" alt="Bootstrap" title="Portfolio informatique Bootstrap, jquery"
@@ -170,6 +170,17 @@
 									onclick="window.open(this.href);return false">Tronc Commun : montagne</a></li>
 							<li>   <a href="https://github.com/metenier73/pythonScript.git" >Boîte à Outils</a></li>
 
+						</ul>
+						<ul>
+							<h6> <u>Python : </u></h6>
+							<li><a href="https://github.com/metenier73/GIEC.git" title="Projet GIEC"
+									onclick="window.open(this.href);return false">API GIEC avec Django REST Framework</a></li>
+									
+							<li><a href="https://github.com/metenier73/D-tection-d-motions-faciales.git" title="D-tection-d-motions-faciales"
+									onclick="window.open(this.href);return false">Détection d'Émotions Faciales avec Deep Learning</a></li>
+							<!--<li><a href="https://meteniermyriam.wixsite.com/mapizza" title="Pizza maison"
+									onclick="window.open(this.href);return false">Pizza Maison</a></li>
+							-->
 						</ul>
 					</div>
 					<!---	<img src="image/dropboxInv.png" alt="Nous &eacute;crire" title="dropbox" width="200" height="200"
