@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questionnaire de Profil Psychologique</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    .range-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .range-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    #result {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    #chart-container {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Questionnaire de Profil Psychologique</h1>
+  <form id="quiz-form">
+    <div class="question">
+      <label>1. Ouverture à l'expérience (Goût pour la nouveauté, la créativité, l'imagination)<br>J’aime explorer de nouvelles idées ou concepts.</label>
+      <input type="range" min="1" max="5" value="3" name="q1">
+      <div class="range-labels"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+    </div>
+    <div class="question">
+      <label>2. Conscience professionnelle (Sens de l'organisation, discipline, fiabilité)<br>Je suis une personne organisée et méthodique.</label>
+      <input type="range" min="1" max="5" value="3" name="q2">
+      <div class="range-labels"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+    </div>
+    <div class="question">
+      <label>3. Extraversion (Sociabilité, énergie, affirmation de soi)<br>Je me sens énergisé·e par les interactions sociales.</label>
+      <input type="range" min="1" max="5" value="3" name="q3">
+      <div class="range-labels"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+    </div>
+    <div class="question">
+      <label>4. Agréabilité (Empathie, coopération, confiance envers autrui)<br>J’essaie de comprendre le point de vue des autres.</label>
+      <input type="range" min="1" max="5" value="3" name="q4">
+      <div class="range-labels"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+    </div>
+    <div class="question">
+      <label>5. Stabilité émotionnelle (Résilience, gestion du stress)<br>Je reste calme sous pression.</label>
+      <input type="range" min="1" max="5" value="3" name="q5">
+      <div class="range-labels"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+    </div>
+    <div class="question">
+      <label>6. Cognition analytique (Préférence pour la logique et l'analyse)<br>Je préfère analyser les faits plutôt que suivre mon instinct.</label>
+      <input type="range" min="1" max="5" value="3" name="q6">
+      <div class="range-labels"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+    </div>
+    <button type="submit">Analyser mon profil</button>
+    <button type="button" onclick="exportResults()">📤 Exporter les résultats</button>
+    <button type="button" onclick="resetForm()">🔄 Réinitialiser</button>
+  </form>
+  <div id="result"></div>
+  <div id="chart-container">
+    <canvas id="traitChart" width="400" height="400"></canvas>
+  </div>
+
+  <script>
+    const form = document.getElementById('quiz-form');
+    const resultDiv = document.getElementById('result');
+    const chartCanvas = document.getElementById('traitChart');
+    let chart;
+
+    const traits = {
+      q1: 'Ouverture à l’expérience',
+      q2: 'Conscience professionnelle',
+      q3: 'Extraversion',
+      q4: 'Agréabilité',
+      q5: 'Stabilité émotionnelle',
+      q6: 'Cognition analytique'
+    };
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const scores = {
+        'Ouverture à l’expérience': 0,
+        'Conscience professionnelle': 0,
+        'Extraversion': 0,
+        'Agréabilité': 0,
+        'Stabilité émotionnelle': 0,
+        'Cognition analytique': 0
+      };
+
+      data.forEach((value, key) => {
+        const trait = traits[key];
+        scores[trait] += parseInt(value);
+      });
+
+      const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+      const resultText = `✅ Votre trait dominant est : ${sorted[0][0]}`;
+
+      resultDiv.textContent = resultText;
+      localStorage.setItem('psychologicalProfileAnswers', JSON.stringify(Object.fromEntries(data)));
+
+      drawChart(scores);
+    });
+
+    function exportResults() {
+      const stored = localStorage.getItem('psychologicalProfileAnswers');
+      if (!stored) {
+        alert("Aucun résultat à exporter. Veuillez d'abord soumettre le questionnaire.");
+        return;
+      }
+      const blob = new Blob([stored], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'profil-psychologique.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function resetForm() {
+      localStorage.removeItem('psychologicalProfileAnswers');
+      form.reset();
+      resultDiv.textContent = '';
+      if (chart) chart.destroy();
+    }
+
+    function drawChart(data) {
+      const labels = Object.keys(data);
+      const values = Object.values(data);
+
+      if (chart) chart.destroy();
+
+      chart = new Chart(chartCanvas, {
+        type: 'radar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Profil Psychologique',
+            data: values,
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            pointBackgroundColor: 'rgba(54, 162, 235, 1)'
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            r: {
+              suggestedMin: 0,
+              suggestedMax: 5
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
