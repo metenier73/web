@@ -136,7 +136,7 @@
 									onclick="window.open(this.href);return false">Pizza Maison</a></li>
 						</ul>
 						<ul>
-							<h6> <u>Github </u></h6>
+							<h6> <u>Portfolio : </u></h6>
 
 							<li><a href="https://metenier73.github.io/PortfolioInfo/" alt="Bootstrap"
 									title="Portfolio informatique Bootstrap, jquery"
@@ -170,6 +170,16 @@
 									onclick="window.open(this.href);return false">Tronc Commun : montagne</a></li>
 							<li>   <a href="https://github.com/metenier73/pythonScript.git" >Boîte à Outils</a></li>
 
+						</ul>
+						<ul>
+							<h6> <u>Python : </u></h6>
+							<li><a href="https://github.com/metenier73/GIEC.git" title="Projet GIEC"
+									onclick="window.open(this.href);return false">API GIEC avec Django REST Framework</a></li>
+							<!--<li><a href="https://meteniermyriam.wixsite.com/snowride73" title="Portfolio esf"
+									onclick="window.open(this.href);return false">RideSnow</a></li>
+							<li><a href="https://meteniermyriam.wixsite.com/mapizza" title="Pizza maison"
+									onclick="window.open(this.href);return false">Pizza Maison</a></li>
+							-->
 						</ul>
 					</div>
 					<!---	<img src="image/dropboxInv.png" alt="Nous &eacute;crire" title="dropbox" width="200" height="200"
