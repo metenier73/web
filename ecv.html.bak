@@ -40,7 +40,7 @@ function afficheMenu(obj) {
 		}
 
 		img {
-			width: 20%;
+			width: 30%;
 		}
 
 		.container {
@@ -96,19 +96,19 @@ function afficheMenu(obj) {
 						
 							<a href="images/AlternanceIngenieurIA.pdf">
 								<img src="images/MIMI.jpg" alt="Cv Developpeur" class="img-rounded" /> <h6>Formation en cours "AI Engineer"</h6> </a>
-						
+						</br>
 						</div>
 						</div>
 					</div>
 					<div class="panel panel-default col-6 col-md-6 col-lg-6"> 
 						<div id="bar">
 						<h3><u>Cordonnées :</u></h3> 
-						<div class="thumbnail"> </br>
+						<div class="thumbnail"> </br></br></br>
 							<ul> 19 rue de l' oura </ul></br>
 							<ul>	69007 Lyon </ul> </br>
-							<ul>	Tel : (+33)7 68 10 61 07</ul>  </br></br></br>
+							<ul>	Tel : (+33)7 68 10 61 07</ul>  </br></br></br></br></br></br>
 							<ul>	Mail : <a href="mailto:meteniermyriam@yahoo.fr">meteniermyriam@yahoo.fr</a>
-							</ul> </br>
+							</ul> 
 							<ul>	<a href="https://www.linkedin.com/in/metenier-myriam-informatique">linkedin</a>
 							</ul>
 						</div>
