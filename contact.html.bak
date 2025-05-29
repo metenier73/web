@@ -21,11 +21,11 @@
 	<style type="text/css">
 		body {
 		font-family: Arial, sans-serif;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   height: auto;
-  margin:auto;
+  margin:5px;
   background-color: #f4f4f4;
 			padding-top: 120px;
 			padding-bottom:60px;
