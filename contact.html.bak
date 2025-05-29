@@ -27,7 +27,7 @@
   height: auto;
   margin:5px 5px 5px 5px;
   background-color: #f4f4f4;
-			padding-top: 120px;
+			padding-top: 110px;
 			padding-bottom:60px;
 		}
 

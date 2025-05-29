@@ -20,6 +20,7 @@
 	
 	<script src="https://code.jquery.com/jquery-1.11.1.js"
 	integrity="sha256-MCmDSoIMecFUw3f1LicZ/D/yonYAoHrgiep/3pCH9rw=" crossorigin="anonymous"></script>
+	
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -32,8 +33,10 @@ function afficheMenu(obj) {
 	<title>CV électronique</title>
 	<style type="text/css">
 		body {
+			 
 			padding-top: auto;
 		}
+		
 
 		[class*="col-"] {
 			margin-bottom: 15px;
@@ -56,6 +59,13 @@ function afficheMenu(obj) {
 			display: inline-block;
 			width: auto;
 		}
+		 footer {
+      background-color: #212529;
+      color: #f8f9fa;
+      padding: 2rem 0;
+      text-align: center;
+    }
+		
 	</style>
 </head>
 <header>
@@ -108,7 +118,7 @@ function afficheMenu(obj) {
 							<ul>	69007 Lyon </ul> </br>
 							<ul>	Tel : (+33)7 68 10 61 07</ul>  </br></br></br></br></br></br>
 							<ul>	Mail : <a href="mailto:meteniermyriam@yahoo.fr">meteniermyriam@yahoo.fr</a>
-							</ul> 
+							</ul> </br>
 							<ul>	<a href="https://www.linkedin.com/in/metenier-myriam-informatique">linkedin</a>
 							</ul>
 						</div>
@@ -404,7 +414,7 @@ function afficheMenu(obj) {
 					<div class="panel-heading">
 						<a href="#item18" data-toggle="collapse"><u>Programming Software : </u></a>
 					</div>
-					<div id="item18" class="panel-collapse collapse ">
+	<div id="item18" class="panel-collapse collapse ">
 		<div class="panel-body">
 			<div id="bar">
 				<h3><u>Langage : </u></h3>
@@ -416,17 +426,14 @@ function afficheMenu(obj) {
 					<li>Search Engine Optimization<meter max="100" value="75"></meter> 75%</li>
 				<h6><u>Framework web : </u></h6>
 					<ul class="skills-list">
-					<li>Vue.js, Angular<meter max="100" value="15"></meter> 35%</li>
-					<li> <meter max="100" value="65"></meter> 65%</li>
-					<li>Django, Meteor, Sails <meter max="100" value="35"></meter> 35%</li>
+					<li>Vue.js, Angular, Meteor, Sails, Node, Express <meter max="100" value="15"></meter> 35%</li>
+					<li>Spring boot, Synphony <meter max="100" value="15"></meter> 35%</li>
+					<li>Django, Pytest<meter max="100" value="35"></meter> 35%</li>
 					
 				<h6><u>Framework IA : </u></h6>
 					<ul class="skills-list">
-					<li>Visual Basic <meter max="100" value="15"></meter> 15%</li>
-					<li>HTML/CSS/Sass, JavaScript <meter max="100" value="65"></meter> 65%</li>
-					<li>JavaEE <meter max="100" value="35"></meter> 35%</li>
-					<li>Python, Ruby on Rails <meter max="100" value="45"></meter> 45%</li>
-					<li>Search Engine Optimization<meter max="100" value="75"></meter> 75%</li>
+					<li>TensorFlow, PyTorch, Scikit-learn <meter max="100" value="15"></meter> 15%</li>
+					
 				</ul>
 
 				<h6><u>Versionning :</u></h6>
@@ -462,10 +469,10 @@ function afficheMenu(obj) {
 				<li>Iptable <meter max="100" value="85"></meter> 85%</li>
 				</ul>
 			</div>
-						</div>
-					</div>
-					</br>
-					<div id="bar"><p>
+		</div>
+	</div>
+	</br>
+		<div id="bar"><p>
 					<em>
 						<h6>Soft Skill </h6>
 					</em>
@@ -487,9 +494,9 @@ function afficheMenu(obj) {
 					<li>Réactivité.</li>
 					<li>Sécurité.</li>   -->
 				
-				</p></div>
+	</p></div>
 				
-				<div id="bar"><p>
+		<div id="bar"><p>
 				<em>
 					<h6>Centre d’ intérêt </h6>
 					</em>
@@ -499,8 +506,8 @@ function afficheMenu(obj) {
 				<a href="docs/Psychanalyse/Certificate.pdf">	<li>Psychanalyse.</li></a>
 				<a href="docs/Bio/2023-08-17_b-a-ba-du-climat-et-de-la-biodiversita-super-badge-fr.pdf"><li>Ecologie.</li></a>
 				</p>
-				</div>
-				</aside>
+		</div>
+			</aside>
 			</div>
 		</div>
 

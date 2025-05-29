@@ -1,6 +1,6 @@
 *{
 	margin:0px;
-	padding:-0.5px;
+	padding:0px;
 }
 @font-face { 
     font-family: 'cac_champagneregular';
@@ -436,3 +436,9 @@ background-color: #424242;
 	
 
 }
+ footer {
+      background-color: #212529;
+      color: #f8f9fa;
+      padding: 2rem 0;
+      text-align: center;
+    }
