@@ -43,7 +43,7 @@
 		}
 
 		img {
-			width: auto;
+			width: 30%;
 		}
 
 		.container {
