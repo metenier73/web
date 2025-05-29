@@ -40,7 +40,7 @@ function afficheMenu(obj) {
 		}
 
 		img {
-			width: 30%;
+			width: 20%;
 		}
 
 		.container {

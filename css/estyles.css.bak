@@ -1,50 +1,76 @@
-
-/* @font-face { */
-    /* font-family: 'cac_champagneregular'; */
-    /* src: url('cac_champagne-webfont.eot'); */
-    /* src: url('cac_champagne-webfont.eot?#iefix') format('embedded-opentype'), */
-         /* url('cac_champagne-webfont.woff2') format('woff2'), */
-         /* url('cac_champagne-webfont.woff') format('woff'), */
-         /* url('cac_champagne-webfont.ttf') format('truetype'), */
-         /* url('cac_champagne-webfont.svg#cac_champagneregular') format('svg'); */
-    /* font-weight: normal; */
-    /* font-style: normal; */
-/* } */
+*{
+	margin:0px;
+	padding:-0.5px;
+}
+@font-face { 
+    font-family: 'cac_champagneregular';
+    src: url('cac_champagne-webfont.eot');
+    src: url('cac_champagne-webfont.eot?#iefix') format('embedded-opentype'),
+         url('cac_champagne-webfont.woff2') format('woff2'),
+         url('cac_champagne-webfont.woff') format('woff'),
+         url('cac_champagne-webfont.ttf') format('truetype'),
+         url('cac_champagne-webfont.svg#cac_champagneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+ }
 
 
 
 /* Extra small devices (phones, up to 480px) */
 /* No media query since this is the default in Bootstrap */
 @media (min-width: @screen-phones) {
-  .container {
-    max-width: auto;
-  }
+  .grid-container {
+	grid-template-columns: 100% ;
+	}
+
+	
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-tablet) {
-  .container {
-    max-width: auto;
+  .grid-container {
+  
+	grid-template-columns: 100%;
   }
 }
 
 /* Medium devices (tablets, 992px and up) */
 @media (min-width: @screen-desktop) {
-  .container {
-    max-width: auto;
+  .grid-container {
+   
+	grid-template-columns: 100%;
   }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: @screen-large-desktop) {
-  .container {
+  .grid-container {
+    
+	grid-template-columns: 100%;
+  }
+}
+
+/* Sur tous types d'écrans orientés verticalement */
+@media all and (orientation: portrait){
+  .grid-container {
     max-width: auto;
   }
 }
+
+
 .container {
-  display:flex-inline-table;
-  margin: 1rem ;
+  display:grid;
+  margin: 2rem ;
   padding: 1.5rem 1.5rem 0 1.5rem;
-  border: 0.1rem solid transparent; }
+  border: 0.1rem solid transparent; 
+  margin-bottom:-60px;
+  
+}
+
+
+.grid-container {
+  display:grid;
+
+margin-bottom:-60px;
 }
 
 
@@ -108,40 +134,36 @@ a:link, a:visited {
 
 a:active /* Quand le visiteur clique sur le lien */
 {
-    background-color: transparent;
+    background-color: blink;
+	
 }
 
 a:hover {
 	color:#888888;
 	text-decoration:underline;
+	transform : scale(1.5);
+	transition: transform 400ms;
 }
 
-#menu{ display: flex-inline-table; width: auto; height : auto; margin: auto;text-align:center; }
+#menu{ display: flex-inline-table; width: auto; height : auto; margin: auto;text-align:left; }
 #sousmenu1{ display: flex-inline-table; width: auto; height : auto; margin: auto;text-align:left; }
 
-/* #section{ */
-	/* text-align:left; */
-	/* font-family: Helvetica, Arial, sans-serif ; */
-	
-	/* font-size:12px  ; */
-	/* text-align:left; */
-	/* margin-top:-18px; */
-/* } */
 
-/* header { */
-   /* text-align:center; */
-	/* font-family: Helvetica, Arial, sans-serif ; */
-	/* font-size:12px  ;   */
-	/* padding-bottom:-10px; */
 
-/* } */
+header { */
+   text-align:center;
+	font-family: Helvetica, Arial, sans-serif ;
+	font-size:12px  ;  
+	padding-bottom:0px;
+
+}
 
 article{
 	display:flex-inline-table;
 	text-align:left;
 	font-family: Helvetica, Arial, sans-serif ;
-	margin-top:-18px;
-	padding-bottom:10px;
+	margin-top:;
+	padding-bottom:20px;
 	font-size:12px  ;
 }
 
@@ -149,41 +171,53 @@ aside {
 	display:flex-inline-table;
 	text-align:left;
 	font-family: Helvetica, Arial, sans-serif ;
-	padding-bottom:90px;
+	padding-bottom:130px;
 	font-size:12px  ;
+	min-width:250px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,200&display=swap');
+
 html {
 
 	background:#888888; /*#FFFF;*/
 	overflow: auto;
-	margin:auto;
+	margin:0px;
 	padding:auto;
 	width:auto;
 	text-align:center;
-
+	font-family: 'IBM Plex Serif', serif;
+	margin-right:-800px;
 }
 
 body {
 	display:flex; 
-	width:auto;	
+	width:100%;	
 	color:#888888;	
 	font-family: 'cac_champagneregular', Helvetica, Arial, sans-serif ;
 	padding:auto;
+	padding-bottom: 60px;
+	padding-right:900px;
+	
 
 }
-#bg {
+#grid {
 
 	background:transparent ;
- 	display:flex-inline-table;	
+ 	display:grid;	
 	font-family: Helvetica, Arial,'Play', sans-serif;
     text-align:center;
     color:#888888;
-    width:auto;
+    width:50%;
 	font-size:12px  ;
-	margin-top:-1px;
-	margin-left:auto;
-	padding-right:auto;
-	padding-top:55px;
+	
+	margin-left:-135px;
+	padding-left:150px;
+	
+	padding-top:100px;
+	font-family: 'IBM Plex Serif', serif;
+	padding-bottom: 00px;
+	
 	
 
 }
@@ -191,16 +225,18 @@ body {
 #bg1 {
 
 	background:transparent ;
- 	display:flex-inline-table;	
+ 	display:grid;	
 	font-family: Helvetica, Arial,'Play', sans-serif;
     text-align:left;
     color:#888888;
-    width:auto;
+    width:30%;
 	font-size:12px  ;
 
-	margin-left:18px;
-	padding-right:auto;
-	padding-top:80px;
+	margin-left: 550px;
+	padding-right:100px;
+	padding-top:120px;
+	font-family: 'IBM Plex Serif', serif;
+
 	
 }
 
@@ -216,7 +252,8 @@ body {
   font-size: 1rem;
   line-height: 1.5rem;
   background-color: #888888;
-  color:#424242;
+ /* color:#424242;*/
+ color:#fff;
 }
 
 mark{
@@ -266,15 +303,26 @@ h6 {
 	      
 }
 
+h7 {
+	font-family: 'cac_champagneregular', Helvetica, Arial, sans-serif ;
+	color:#888888;
+	font-size:12.5px ;
+	clear:both;
+	padding:auto;
+	text-decoration :blink;
+	text-align:center;
+	      
+}
 
 
-#p1 {
+#p {
+	display: flex;
 	font-family: Helvetica, Arial, sans-serif ;
-	margin-bottom:auto;
+	margin:10px;
 	font-size:12px;
 	color:#888888;
-	letter-spacing: normal ;
-	padding:auto;
+	letter-spacing: justify ;
+	padding:10px;
 	text-align:left;
 
 }
@@ -356,3 +404,35 @@ meter::-webkit-meter-bar {
  
 }
 
+div
+{
+    background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1));
+}
+
+ 
+
+.grid-container1 {
+  display:grid;
+  text-align:center;
+ 
+  
+  margin: 0.5rem ;
+  padding: 1.5rem 1.5rem 0 0.5rem;
+  border: 0.1rem solid transparent;
+  margin-bottom:auto;
+background-color: #424242;
+  }  
+
+.main_footer {
+	background-color: #242424;
+    display:grid;
+	font-family: Helvetica, Arial,'Play', sans-serif;
+	text-align:center;
+    background:transparent ;
+    color:#888888;
+	margin-bottom:auto;
+	padding-bottom: auto;
+	margin-left: 95px;
+	
+
+}
