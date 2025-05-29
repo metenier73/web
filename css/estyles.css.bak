@@ -20,7 +20,7 @@
 /* No media query since this is the default in Bootstrap */
 @media (min-width: @screen-phones) {
   .grid-container {
-	grid-template-columns: 100% ;
+	grid-template-columns: auto ;
 	}
 
 	
@@ -432,7 +432,7 @@ background-color: #424242;
     color:#888888;
 	margin-bottom:auto;
 	padding-bottom: auto;
-	margin-left: 95px;
+	margin-left: 80px;
 	
 
 }
