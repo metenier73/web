@@ -34,19 +34,20 @@
     label {
       font-weight: 600;
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+      margin-top: 16px;
     }
 
-    textarea, input {
+    input {
       width: 100%;
-      padding: 12px;
-      font-size: 16px;
+      padding: 10px;
+      font-size: 15px;
       border: 1px solid #ccc;
-      border-radius: 10px;
-      transition: border 0.3s ease;
+      border-radius: 8px;
+      margin-bottom: 8px;
     }
 
-    textarea:focus, input:focus {
+    input:focus {
       border-color: #3498db;
       outline: none;
     }
@@ -78,19 +79,8 @@
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
     }
 
-    .resultats h3 {
-      margin-top: 0;
-      color: #2c3e50;
-    }
-
     .resultats ul {
       padding-left: 20px;
-      list-style-type: square;
-      color: #34495e;
-    }
-
-    .resultats p {
-      font-size: 16px;
     }
   </style>
 </head>
@@ -98,41 +88,58 @@
 
   <div class="container">
     <h1>Un petit jeu de 5 minutes</h1>
-    <p style="text-align:center;"><strong>Faites un vœux avant de commencer. Répondez au fur et à mesure sans lire tout d’un coup !</strong></p>
+    <p style="text-align:center;"><strong>Faites un vœu avant de commencer. Répondez pas à pas, sans tricher 😉</strong></p>
 
+    <!-- Question 1 -->
     <div class="question">
-      <h2>Question 1</h2>
-      <label>Rangez les animaux suivants par ordre de préférence :</label>
-      <p>Vache – Tigre – Mouton – Cheval – Singe</p>
-      <input type="text" id="q1" placeholder="ex: Tigre, Vache, Mouton, Cheval, Singe">
+      <h2>Question 1 : Classement des animaux</h2>
+      <label>Classez ces animaux du plus au moins important pour vous :</label>
+      <p><em>(Écrivez-les dans l'ordre : Vache, Tigre, Mouton, Cheval, Singe)</em></p>
+      <input type="text" id="q1" placeholder="ex: Tigre, Cheval, Vache, Mouton, Singe">
     </div>
 
+    <!-- Question 2 -->
     <div class="question">
-      <h2>Question 2</h2>
-      <label>Attribuez un mot ou adjectif à chacun :</br>
-	  Chien : ... Chat : ... Rat : ... Café : ... Océan : ...
-	  </label>
-      <textarea id="q2" rows="5" placeholder="Chien : ..., Chat : ..., Rat : ..., Café : ..., Océan : ..."></textarea>
+      <h2>Question 2 : Associations de mots</h2>
+      <label>Chien </label>
+      <input type="text" id="chien" placeholder="ex: loyal">
+      <label>Chat </label>
+      <input type="text" id="chat" placeholder="ex: mystérieux">
+      <label>Rat </label>
+      <input type="text" id="rat" placeholder="ex: sournois">
+      <label>Café </label>
+      <input type="text" id="cafe" placeholder="ex: fort">
+      <label>Océan </label>
+      <input type="text" id="ocean" placeholder="ex: infini">
     </div>
 
+    <!-- Question 3 -->
     <div class="question">
-      <h2>Question 3</h2>
-      <label>Associez une personne que vous connaissez à chaque couleur :</br>
-	  Jaune : ... Orange : ... Rouge : ... Blanc : ... Vert : ...
-	  </label>
-      <textarea id="q3" rows="5" placeholder="Jaune : ..., Orange : ..., Rouge : ..., Blanc : ..., Vert : ..."></textarea>
+      <h2>Question 3 : Couleurs et personnes</h2>
+      <label>Jaune </label>
+      <input type="text" id="jaune" placeholder="ex: Mamie">
+      <label>Orange </label>
+      <input type="text" id="orange" placeholder="ex: Léa">
+      <label>Rouge </label>
+      <input type="text" id="rouge" placeholder="ex: Hugo">
+      <label>Blanc </label>
+      <input type="text" id="blanc" placeholder="ex: Emma">
+      <label>Vert </label>
+      <input type="text" id="vert" placeholder="ex: Prof de musique">
     </div>
 
+    <!-- Question 4 -->
     <div class="question">
-      <h2>Question 4</h2>
+      <h2>Question 4 : Vœux</h2>
       <label>Quel est votre chiffre favori ?</label>
-      <input type="text" id="q4-chiffre" placeholder="ex: 7">
+      <input type="number" id="q4-chiffre" placeholder="ex: 7">
       <label>Quel est votre jour préféré de la semaine ?</label>
       <input type="text" id="q4-jour" placeholder="ex: Vendredi">
     </div>
 
     <button onclick="afficherResultats()">Afficher les résultats</button>
 
+    <!-- Résultats -->
     <div class="resultats" id="resultats">
       <h2>Résultats personnalisés</h2>
       <div id="resultats-contenu"></div>
@@ -140,7 +147,7 @@
   </div>
 
   <script>
-    const significationsAnimaux = {
+    const animaux = {
       "vache": "la carrière professionnelle",
       "tigre": "la fierté",
       "mouton": "l'amour",
@@ -148,7 +155,7 @@
       "singe": "l'argent"
     };
 
-    const significationsCouleurs = {
+    const couleurs = {
       "jaune": "quelqu’un qui ne vous oubliera jamais",
       "orange": "un(e) ami(e) proche",
       "rouge": "quelqu’un que vous aimez vraiment",
@@ -156,58 +163,56 @@
       "vert": "une personne inoubliable"
     };
 
-    const significationsAnimaux2 = {
-      "chien": "votre propre personnalité",
-      "chat": "la personnalité de votre partenaire",
-      "rat": "la personnalité de votre ennemi",
-      "café": "ce que vous pensez du sexe",
-      "océan": "votre perception de la vie"
-    };
-
     function afficherResultats() {
-      const resultat = document.getElementById("resultats-contenu");
-      resultat.innerHTML = "";
+      const r = document.getElementById("resultats-contenu");
+      r.innerHTML = "";
 
-      const ordreAnimaux = document.getElementById("q1").value.toLowerCase().split(/[\s,;-]+/);
-      const animalHtml = ordreAnimaux
-        .map(animal => animal.trim())
-        .filter(animal => significationsAnimaux[animal])
-        .map(animal => `<li><strong>${animal}</strong> : ${significationsAnimaux[animal]}</li>`)
-        .join("");
-
-      if (animalHtml) {
-        resultat.innerHTML += "<h3>Vos priorités (Question 1) :</h3><ul>" + animalHtml + "</ul>";
+      // Question 1 : ordre animaux
+      const q1 = document.getElementById("q1").value.toLowerCase().split(/[\s,;-]+/).filter(Boolean);
+      if (q1.length) {
+        r.innerHTML += `<h3>Vos priorités :</h3><ul>` +
+          q1.filter(animal => animaux[animal])
+             .map(animal => `<li><strong>${animal}</strong> : ${animaux[animal]}</li>`)
+             .join("") + `</ul>`;
       }
 
-      const texteQ2 = document.getElementById("q2").value.toLowerCase();
-      const lignesQ2 = texteQ2.split(/\n|,/);
-      const q2Html = lignesQ2
-        .map(l => l.split(":"))
-        .filter(pair => pair.length === 2 && significationsAnimaux2[pair[0].trim()])
-        .map(([mot, desc]) => `<li><strong>${mot.trim()}</strong> (${significationsAnimaux2[mot.trim()]}) : ${desc.trim()}</li>`)
-        .join("");
-
-      if (q2Html) {
-        resultat.innerHTML += "<h3>Personnalités (Question 2) :</h3><ul>" + q2Html + "</ul>";
+      // Question 2 : mots
+      const pairsQ2 = [
+        ["chien", "votre propre personnalité"],
+        ["chat", "la personnalité de votre partenaire"],
+        ["rat", "votre ennemi"],
+        ["cafe", "ce que vous pensez du sexe"],
+        ["ocean", "votre perception de la vie"]
+      ];
+      let q2html = "";
+      for (const [id, label] of pairsQ2) {
+        const val = document.getElementById(id).value;
+        if (val) {
+          q2html += `<li><strong>${id}</strong> (${label}) : ${val}</li>`;
+        }
+      }
+      if (q2html) {
+        r.innerHTML += `<h3>Associations de mots :</h3><ul>${q2html}</ul>`;
       }
 
-      const texteQ3 = document.getElementById("q3").value.toLowerCase();
-      const lignesQ3 = texteQ3.split(/\n|,/);
-      const q3Html = lignesQ3
-        .map(l => l.split(":"))
-        .filter(pair => pair.length === 2 && significationsCouleurs[pair[0].trim()])
-        .map(([couleur, personne]) => `<li><strong>${couleur.trim()}</strong> : ${personne.trim()} (${significationsCouleurs[couleur.trim()]})</li>`)
-        .join("");
-
-      if (q3Html) {
-        resultat.innerHTML += "<h3>Relations (Question 3) :</h3><ul>" + q3Html + "</ul>";
+      // Question 3 : couleurs
+      const couleursIds = ["jaune", "orange", "rouge", "blanc", "vert"];
+      let q3html = "";
+      for (const id of couleursIds) {
+        const val = document.getElementById(id).value;
+        if (val) {
+          q3html += `<li><strong>${id}</strong> : ${val} (${couleurs[id]})</li>`;
+        }
+      }
+      if (q3html) {
+        r.innerHTML += `<h3>Personnes & couleurs :</h3><ul>${q3html}</ul>`;
       }
 
-      const chiffre = document.getElementById("q4-chiffre").value.trim();
-      const jour = document.getElementById("q4-jour").value.trim();
-
+      // Question 4 : chiffre + jour
+      const chiffre = document.getElementById("q4-chiffre").value;
+      const jour = document.getElementById("q4-jour").value;
       if (chiffre && jour) {
-        resultat.innerHTML += `<h3>Vœux magique (Question 4) :</h3><p>Vous devez envoyer ce message à <strong>${chiffre}</strong> personnes.<br>Votre vœux se réalisera un <strong>${jour}</strong>.</p>`;
+        r.innerHTML += `<h3>Vœu magique :</h3><p>Envoyez ce message à <strong>${chiffre}</strong> personnes.<br>Votre vœu se réalisera un <strong>${jour}</strong>.</p>`;
       }
 
       document.getElementById("resultats").style.display = "block";
