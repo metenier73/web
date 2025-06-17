@@ -54,7 +54,7 @@
 
     button {
       display: block;
-      margin: 30px auto 0;
+      margin: 20px auto 0;
       background: linear-gradient(to right, #3498db, #2ecc71);
       color: white;
       border: none;
@@ -67,6 +67,11 @@
 
     button:hover {
       background: linear-gradient(to right, #2ecc71, #3498db);
+    }
+
+    .reset-button {
+      background-color: #e74c3c !important;
+      margin-top: 10px;
     }
 
     .resultats {
@@ -137,7 +142,9 @@
       <input type="text" id="q4-jour" placeholder="ex: Vendredi">
     </div>
 
+    <!-- Boutons -->
     <button onclick="afficherResultats()">Afficher les résultats</button>
+    <button class="reset-button" onclick="reinitialiserTest()">Réinitialiser le test</button>
 
     <!-- Résultats -->
     <div class="resultats" id="resultats">
@@ -167,16 +174,16 @@
       const r = document.getElementById("resultats-contenu");
       r.innerHTML = "";
 
-      // Question 1 : ordre animaux
+      // Question 1
       const q1 = document.getElementById("q1").value.toLowerCase().split(/[\s,;-]+/).filter(Boolean);
       if (q1.length) {
         r.innerHTML += `<h3>Vos priorités :</h3><ul>` +
           q1.filter(animal => animaux[animal])
-             .map(animal => `<li><strong>${animal}</strong> : ${animaux[animal]}</li>`)
-             .join("") + `</ul>`;
+            .map(animal => `<li><strong>${animal}</strong> : ${animaux[animal]}</li>`)
+            .join("") + `</ul>`;
       }
 
-      // Question 2 : mots
+      // Question 2
       const pairsQ2 = [
         ["chien", "votre propre personnalité"],
         ["chat", "la personnalité de votre partenaire"],
@@ -195,7 +202,7 @@
         r.innerHTML += `<h3>Associations de mots :</h3><ul>${q2html}</ul>`;
       }
 
-      // Question 3 : couleurs
+      // Question 3
       const couleursIds = ["jaune", "orange", "rouge", "blanc", "vert"];
       let q3html = "";
       for (const id of couleursIds) {
@@ -208,7 +215,7 @@
         r.innerHTML += `<h3>Personnes & couleurs :</h3><ul>${q3html}</ul>`;
       }
 
-      // Question 4 : chiffre + jour
+      // Question 4
       const chiffre = document.getElementById("q4-chiffre").value;
       const jour = document.getElementById("q4-jour").value;
       if (chiffre && jour) {
@@ -217,6 +224,14 @@
 
       document.getElementById("resultats").style.display = "block";
       window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function reinitialiserTest() {
+      const inputs = document.querySelectorAll("input");
+      inputs.forEach(input => input.value = "");
+      document.getElementById("resultats-contenu").innerHTML = "";
+      document.getElementById("resultats").style.display = "none";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
 
