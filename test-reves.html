@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Test de rêve interactif</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #dfe9f3, #ffffff);
+      margin: 0;
+      padding: 40px;
+      color: #2c3e50;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #34495e;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .question {
+      margin-bottom: 35px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    textarea, input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      transition: border 0.3s ease;
+    }
+
+    textarea:focus, input:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 0;
+      background: linear-gradient(to right, #3498db, #2ecc71);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #2ecc71, #3498db);
+    }
+
+    .resultats {
+      display: none;
+      background-color: #f1f8ff;
+      padding: 30px;
+      border-radius: 16px;
+      margin-top: 40px;
+      border-left: 6px solid #3498db;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .resultats h3 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    .resultats ul {
+      padding-left: 20px;
+      list-style-type: square;
+      color: #34495e;
+    }
+
+    .resultats p {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Un petit jeu de 5 minutes</h1>
+    <p style="text-align:center;"><strong>Faites un vœu avant de commencer. Répondez au fur et à mesure sans lire tout d’un coup !</strong></p>
+
+    <div class="question">
+      <h2>Question 1</h2>
+      <label>Rangez les animaux suivants par ordre de préférence :</label>
+      <p>Vache – Tigre – Mouton – Cheval – Singe</p>
+      <input type="text" id="q1" placeholder="ex: Tigre, Vache, Mouton, Cheval, Singe">
+    </div>
+
+    <div class="question">
+      <h2>Question 2</h2>
+      <label>Attribuez un mot ou adjectif à chacun :</label>
+      <textarea id="q2" rows="5" placeholder="Chien : ..., Chat : ..., Rat : ..., Café : ..., Océan : ..."></textarea>
+    </div>
+
+    <div class="question">
+      <h2>Question 3</h2>
+      <label>Associez une personne que vous connaissez à chaque couleur :</label>
+      <textarea id="q3" rows="5" placeholder="Jaune : ..., Orange : ..., Rouge : ..., Blanc : ..., Vert : ..."></textarea>
+    </div>
+
+    <div class="question">
+      <h2>Question 4</h2>
+      <label>Quel est votre chiffre favori ?</label>
+      <input type="text" id="q4-chiffre" placeholder="ex: 7">
+      <label>Quel est votre jour préféré de la semaine ?</label>
+      <input type="text" id="q4-jour" placeholder="ex: Vendredi">
+    </div>
+
+    <button onclick="afficherResultats()">Afficher les résultats</button>
+
+    <div class="resultats" id="resultats">
+      <h2>Résultats personnalisés</h2>
+      <div id="resultats-contenu"></div>
+    </div>
+  </div>
+
+  <script>
+    const significationsAnimaux = {
+      "vache": "la carrière professionnelle",
+      "tigre": "la fierté",
+      "mouton": "l'amour",
+      "cheval": "la famille",
+      "singe": "l'argent"
+    };
+
+    const significationsCouleurs = {
+      "jaune": "quelqu’un qui ne vous oubliera jamais",
+      "orange": "un(e) ami(e) proche",
+      "rouge": "quelqu’un que vous aimez vraiment",
+      "blanc": "votre sœur",
+      "vert": "une personne inoubliable"
+    };
+
+    const significationsAnimaux2 = {
+      "chien": "votre propre personnalité",
+      "chat": "la personnalité de votre partenaire",
+      "rat": "la personnalité de votre ennemi",
+      "café": "ce que vous pensez du sexe",
+      "océan": "votre perception de la vie"
+    };
+
+    function afficherResultats() {
+      const resultat = document.getElementById("resultats-contenu");
+      resultat.innerHTML = "";
+
+      const ordreAnimaux = document.getElementById("q1").value.toLowerCase().split(/[\s,;-]+/);
+      const animalHtml = ordreAnimaux
+        .map(animal => animal.trim())
+        .filter(animal => significationsAnimaux[animal])
+        .map(animal => `<li><strong>${animal}</strong> : ${significationsAnimaux[animal]}</li>`)
+        .join("");
+
+      if (animalHtml) {
+        resultat.innerHTML += "<h3>Vos priorités (Question 1) :</h3><ul>" + animalHtml + "</ul>";
+      }
+
+      const texteQ2 = document.getElementById("q2").value.toLowerCase();
+      const lignesQ2 = texteQ2.split(/\n|,/);
+      const q2Html = lignesQ2
+        .map(l => l.split(":"))
+        .filter(pair => pair.length === 2 && significationsAnimaux2[pair[0].trim()])
+        .map(([mot, desc]) => `<li><strong>${mot.trim()}</strong> (${significationsAnimaux2[mot.trim()]}) : ${desc.trim()}</li>`)
+        .join("");
+
+      if (q2Html) {
+        resultat.innerHTML += "<h3>Personnalités (Question 2) :</h3><ul>" + q2Html + "</ul>";
+      }
+
+      const texteQ3 = document.getElementById("q3").value.toLowerCase();
+      const lignesQ3 = texteQ3.split(/\n|,/);
+      const q3Html = lignesQ3
+        .map(l => l.split(":"))
+        .filter(pair => pair.length === 2 && significationsCouleurs[pair[0].trim()])
+        .map(([couleur, personne]) => `<li><strong>${couleur.trim()}</strong> : ${personne.trim()} (${significationsCouleurs[couleur.trim()]})</li>`)
+        .join("");
+
+      if (q3Html) {
+        resultat.innerHTML += "<h3>Relations (Question 3) :</h3><ul>" + q3Html + "</ul>";
+      }
+
+      const chiffre = document.getElementById("q4-chiffre").value.trim();
+      const jour = document.getElementById("q4-jour").value.trim();
+
+      if (chiffre && jour) {
+        resultat.innerHTML += `<h3>Vœux magique (Question 4) :</h3><p>Vous devez envoyer ce message à <strong>${chiffre}</strong> personnes.<br>Votre vœu se réalisera un <strong>${jour}</strong>.</p>`;
+      }
+
+      document.getElementById("resultats").style.display = "block";
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
