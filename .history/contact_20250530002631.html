@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=firefox">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Portfolio Informatique">
+	<meta name="author" content="Myriam Metenier">
+	<link rel="icon" href="images/papillon.ico" />
+	<link rel="stylesheet" href="css/cacchampagne/stylesheet.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/Cstyles.css" />
+	<link rel="stylesheet" type="text/css" href="css/CstylesErreur.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrapCyborg.min.css" />
+	<!-- Custom styles for this template -->
+	<link href="css/starter-template.css" rel="stylesheet">
+	<link rel="stylesheet" media="screen and (max-width: 1014px)" href="petite_resolution.css" />
+	<!-- Pour ceux qui ont une résolution inférieure à 1280px -->
+	<meta name="viewport" content="width=device-width" />
+	<title>CV électronique</title>
+	<style type="text/css">
+		body {
+		font-family: Arial, sans-serif;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin:5px 0 0 -5px;
+  background-color: #f4f4f4;
+			padding-top: 120px;
+			padding-bottom:60px;
+		}
+
+		[class*="col-"] {
+			margin: 5px 5px 5px 5px;
+			padding: 5px 5px 5px 5px;
+		}
+
+		img {
+			width: 20%;
+		}
+
+		.container {
+			margin-left: auto;
+		}
+
+		a:active,
+		a:focus {
+			outline: none;
+		}
+
+		.inline-form input {
+			display: inline-block;
+			width: auto
+		}
+	</style>
+</head>
+<header>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+					aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Portfolio</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="ecv.html">Ecv</a></li>
+					<li><a href="projets.html">Projets</a></li>
+					<li class="active"><a href="contact.html">Commentaire</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+</header>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="panel panel-default col-lg-12">
+				<h3>Commentaire Visiteur</h3>
+				<form id="contactForm">
+					<fieldset>
+						<div class="alert alert-info col-lg-12">
+							<p>Formulaire en cours de réalisation ! </p>
+						</div>
+						<legend>Vos coordonnées</legend> <!-- Titre du fieldset -->
+						<label for="societe"> Nom de votre société :</label><br />
+						<input type="text" name="societe" id="societe" size="60"   /><br />
+						<label for="civilite">Civilité :</label>
+						<select name="civilite" id="civilite" required>
+							<option value="MMe">MME</option>
+							<option value="Mlle">Mlle</option>
+							<option value="Mr">Mr</option>
+						</select>
+						<br />
+						<label for="nom"> Nom :</label>
+						<input type="text" name="nom" id="nom" placeholder="Ex : Zozor" autofocus required /><br />
+						<label for="prenom"> Prénom :</label>
+						<input type="text" name="prenom" id="prenom" required /><br />
+						<label for="date"> Date Naissance :</label>
+						<input type="date" name="date" id="date" required /><br />
+						<label for="pays">Nationalité :</label>
+						<select name="pays" id="pays">
+							<optgroup label="Europe">
+								<option value="france" selected>France</option>
+								<option value="espagne">Espagne</option>
+								<option value="italie">Italie</option>
+								<option value="royaume-uni">Royaume-Uni</option>
+								<option value="Autre">Autre</option>
+							</optgroup>
+							<optgroup label="Amérique">
+								<option value="canada">Brazile</option>
+								<option value="etats-unis">Etats-Unis</option>
+								<option value="Autre">Autre</option>
+							</optgroup>
+							<optgroup label="Asie">
+								<option value="chine">Chine</option>
+								<option value="japon">Japon</option>
+								<option value="Autre">Autre</option>
+							</optgroup>
+						</select> <br /><br />
+						<label for="address"> Adresse : </label>
+						<input type="text" name="adresse" id="adresse" size="60" required />
+						<label for="codePostal">Code Postal :</label>
+						<input type="text" name="codePostal" id="codePostal" size="5" required /><br />
+						<label for="localite">Localité : </label>
+						<input type="text" name="localite" id="localite" size="30" maxlength="20" required /><br />
+						<label for="tel"> Téléphone : </label>
+						<input type="tel" name="tel" id="tel" /><br />
+						<label for="email"> e-mail : </label>
+						<input type="email" name="email" id="email" required /></br></br>
+					</fieldset>
+					<fieldset>
+						<p>
+						<p>
+							<label for="ameliorer">Comment pensez-vous que je puisse améliorer mon site ? </label><br />
+							<textarea name="ameliorer" id="ameliorer" rows="3" cols="80"></textarea>
+						</p>
+						<label for="pseudo">Votre pseudo : </label>
+						<input type="text" name="pseudo" id="pseudo" />
+						</p>
+						<p>
+							<label for="mdp">Mot de passe</label> :
+							<input type="password" name="mdp" id="mdp" required>
+							<span id="aideMdp"></span>
+						</p>
+						<p>
+							<input type="reset" value="Annuler" id="reset" />
+							<input type="submit" value="Envoyer" id="envoi" />
+							 <input type="button" value="Convert to JSON" onclick="convertToJson()">
+						</p>
+					</fieldset>
+				</form>
+			</div>
+			<div class="grid-container">
+				<footer class="main_footer center_text ptb_2 ">
+					<p>&copy; - Author : metenier myriam
+						<a href="mailto:metenier@yahoo.fr">Ecrivez-moi !</a>
+					</p>
+				</footer>
+			</div>
+		</div>
+	</div>
+		<script src="https://code.jquery.com/jquery-1.11.1.js" integrity="sha256-MCmDSoIMecFUw3f1LicZ/D/yonYAoHrgiep/3pCH9rw="
+			crossorigin="anonymous"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		<!-- on inclut la bibliothèque depuis les serveurs de Google -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript">
+				< ![CDATA[//><!--
+				function afficheMenu(obj) {
+					var idMenu = obj.id;
+					var idSousMenu = 'sous' + idMenu; var sousMenu = document.getElementById(idSousMenu);
+					/***/ /** si le sous-menu correspondant au menu cliqué **/
+				/** est caché alors on l'affiche, sinon on le cache **/ /**
+				*/ if (sousMenu.style.display == "none") { sousMenu.style.display = "flex-inline-table"; } else { sousMenu.style.display = "none"; }
+				}//--><!]]>
+		</script>
+		<script>
+				// Vérification de la longueur du mot de passe saisi
+				document.getElementById("mdp").addEventListener("input", function (e) {
+					var mdp = e.target.value; // Valeur saisie dans le champ mdp
+					var longueurMdp = "faible";
+					var couleurMsg = "red"; // Longueur faible => couleur rouge
+					if (mdp.length >= 8) {
+						longueurMdp = "suffisante";
+						couleurMsg = "green"; // Longueur suffisante => couleur verte
+					} else if (mdp.length >= 4) {
+						longueurMdp = "moyenne";
+						couleurMsg = "orange"; // Longueur moyenne => couleur orange
+					}
+					var aideMdpElt = document.getElementById("aideMdp");
+					aideMdpElt.textContent = "Longueur : " + longueurMdp; // Texte de l'aide
+					aideMdpElt.style.color = couleurMsg; // Couleur du texte de l'aide
+				});
+				// Contrôle du courriel en fin de saisie
+				document.getElementById("email").addEventListener("blur", function (e) {
+					// Correspond à une chaîne de la forme xxx@yyy.zzz
+					var regexCourriel = /.+@.+\..+/;
+					var validiteCourriel = "";
+					if (!regexCourriel.test(e.target.value)) {
+						validiteCourriel = "Adresse invalide";
+					}
+					document.getElementById("aideCourriel").textContent = validiteCourriel;
+				});
+				
+
+		</script>
+	<script src="app.js"></script>
+	</body>
+</html>

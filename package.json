@@ -1,0 +1,105 @@
+{
+  "name": "portfolio-metenier",
+  "version": "2.0.0",
+  "description": "Portfolio informatique moderne de Myriam Metenier - Développeuse Full Stack & Administratrice Système",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve . -p 8000",
+    "dev": "live-server --port=8000 --open=/",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "postcss css/modern-styles.css -o css/modern-styles.min.css",
+    "build:js": "terser js/modern-app.js -o js/modern-app.min.js --compress --mangle",
+    "lint": "eslint js/*.js",
+    "lint:css": "stylelint css/*.css",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "test": "echo \"No tests specified\" && exit 0",
+    "validate": "html-validate *.html",
+    "optimize": "npm run build && npm run lint && npm run validate",
+    "deploy": "npm run optimize && echo \"Ready for deployment\""
+  },
+  "keywords": [
+    "portfolio",
+    "web-development",
+    "full-stack",
+    "system-administration",
+    "bootstrap",
+    "responsive",
+    "accessibility",
+    "modern-web"
+  ],
+  "author": {
+    "name": "Myriam Metenier",
+    "email": "metenier@yahoo.fr",
+    "url": "https://meteniermyriam.wixsite.com/portfolio"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/portfolio-metenier.git"
+  },
+  "bugs": {
+    "url": "https://github.com/username/portfolio-metenier/issues"
+  },
+  "homepage": "https://meteniermyriam.wixsite.com/portfolio",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "eslint": "^8.55.0",
+    "html-validate": "^8.12.0",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0",
+    "prettier": "^3.1.1",
+    "serve": "^14.2.1",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
+    "terser": "^5.24.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {},
+      "cssnano": {
+        "preset": "default"
+      }
+    }
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-unused-vars": "warn",
+      "no-console": "warn"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "printWidth": 80
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "selector-class-pattern": null,
+      "no-descending-specificity": null
+    }
+  }
+} 
