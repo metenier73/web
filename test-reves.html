@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Test de rêve interactif</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #dfe9f3, #ffffff);
+      margin: 0;
+      padding: 40px;
+      color: #2c3e50;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #34495e;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .question {
+      margin-bottom: 35px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+      margin-top: 16px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+
+    input:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto 0;
+      background: linear-gradient(to right, #3498db, #2ecc71);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #2ecc71, #3498db);
+    }
+
+    .reset-button {
+      background-color: #e74c3c !important;
+      margin-top: 10px;
+    }
+
+    .resultats {
+      display: none;
+      background-color: #f1f8ff;
+      padding: 30px;
+      border-radius: 16px;
+      margin-top: 40px;
+      border-left: 6px solid #3498db;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .resultats ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Un petit jeu de 5 minutes</h1>
+    <p style="text-align:center;"><strong>Faites un vœu avant de commencer. Répondez pas à pas, sans tricher 😉</strong></p>
+
+    <!-- Question 1 -->
+    <div class="question">
+      <h2>Question 1 : Classement des animaux</h2>
+      <label>Classez ces animaux du plus au moins important pour vous :</label>
+      <p><em>(Écrivez-les dans l'ordre : Vache, Tigre, Mouton, Cheval, Singe)</em></p>
+      <input type="text" id="q1" placeholder="ex: Tigre, Cheval, Vache, Mouton, Singe">
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+      <h2>Question 2 : Associations de mots</h2>
+      <label>Chien </label>
+      <input type="text" id="chien" placeholder="ex: loyal">
+      <label>Chat </label>
+      <input type="text" id="chat" placeholder="ex: mystérieux">
+      <label>Rat </label>
+      <input type="text" id="rat" placeholder="ex: sournois">
+      <label>Café </label>
+      <input type="text" id="cafe" placeholder="ex: fort">
+      <label>Océan </label>
+      <input type="text" id="ocean" placeholder="ex: infini">
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+      <h2>Question 3 : Couleurs et personnes</h2>
+      <label>Jaune </label>
+      <input type="text" id="jaune" placeholder="ex: Mamie">
+      <label>Orange </label>
+      <input type="text" id="orange" placeholder="ex: Léa">
+      <label>Rouge </label>
+      <input type="text" id="rouge" placeholder="ex: Hugo">
+      <label>Blanc </label>
+      <input type="text" id="blanc" placeholder="ex: Emma">
+      <label>Vert </label>
+      <input type="text" id="vert" placeholder="ex: Prof de musique">
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question">
+      <h2>Question 4 : Vœux</h2>
+      <label>Quel est votre chiffre favori ?</label>
+      <input type="number" id="q4-chiffre" placeholder="ex: 7">
+      <label>Quel est votre jour préféré de la semaine ?</label>
+      <input type="text" id="q4-jour" placeholder="ex: Vendredi">
+    </div>
+
+    <!-- Boutons -->
+    <button onclick="afficherResultats()">Afficher les résultats</button>
+    <button class="reset-button" onclick="reinitialiserTest()">Réinitialiser le test</button>
+
+    <!-- Résultats -->
+    <div class="resultats" id="resultats">
+      <h2>Résultats personnalisés</h2>
+      <div id="resultats-contenu"></div>
+    </div>
+  </div>
+
+  <script>
+    const animaux = {
+      "vache": "la carrière professionnelle",
+      "tigre": "la fierté",
+      "mouton": "l'amour",
+      "cheval": "la famille",
+      "singe": "l'argent"
+    };
+
+    const couleurs = {
+      "jaune": "quelqu’un qui ne vous oubliera jamais",
+      "orange": "un(e) ami(e) proche",
+      "rouge": "quelqu’un que vous aimez vraiment",
+      "blanc": "votre sœur",
+      "vert": "une personne inoubliable"
+    };
+
+    function afficherResultats() {
+      const r = document.getElementById("resultats-contenu");
+      r.innerHTML = "";
+
+      // Question 1
+      const q1 = document.getElementById("q1").value.toLowerCase().split(/[\s,;-]+/).filter(Boolean);
+      if (q1.length) {
+        r.innerHTML += `<h3>Vos priorités :</h3><ul>` +
+          q1.filter(animal => animaux[animal])
+            .map(animal => `<li><strong>${animal}</strong> : ${animaux[animal]}</li>`)
+            .join("") + `</ul>`;
+      }
+
+      // Question 2
+      const pairsQ2 = [
+        ["chien", "votre propre personnalité"],
+        ["chat", "la personnalité de votre partenaire"],
+        ["rat", "votre ennemi"],
+        ["cafe", "ce que vous pensez du sexe"],
+        ["ocean", "votre perception de la vie"]
+      ];
+      let q2html = "";
+      for (const [id, label] of pairsQ2) {
+        const val = document.getElementById(id).value;
+        if (val) {
+          q2html += `<li><strong>${id}</strong> (${label}) : ${val}</li>`;
+        }
+      }
+      if (q2html) {
+        r.innerHTML += `<h3>Associations de mots :</h3><ul>${q2html}</ul>`;
+      }
+
+      // Question 3
+      const couleursIds = ["jaune", "orange", "rouge", "blanc", "vert"];
+      let q3html = "";
+      for (const id of couleursIds) {
+        const val = document.getElementById(id).value;
+        if (val) {
+          q3html += `<li><strong>${id}</strong> : ${val} (${couleurs[id]})</li>`;
+        }
+      }
+      if (q3html) {
+        r.innerHTML += `<h3>Personnes & couleurs :</h3><ul>${q3html}</ul>`;
+      }
+
+      // Question 4
+      const chiffre = document.getElementById("q4-chiffre").value;
+      const jour = document.getElementById("q4-jour").value;
+      if (chiffre && jour) {
+        r.innerHTML += `<h3>Vœu magique :</h3><p>Envoyez ce message à <strong>${chiffre}</strong> personnes.<br>Votre vœu se réalisera un <strong>${jour}</strong>.</p>`;
+      }
+
+      document.getElementById("resultats").style.display = "block";
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function reinitialiserTest() {
+      const inputs = document.querySelectorAll("input");
+      inputs.forEach(input => input.value = "");
+      document.getElementById("resultats-contenu").innerHTML = "";
+      document.getElementById("resultats").style.display = "none";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
