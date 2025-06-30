@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Projets de Myriam Metenier - Portfolio Informatique">
+	<meta name="author" content="Myriam Metenier">
+	<link rel="icon" href="images/papillon.ico" />
+	<title>Projets - Portfolio Myriam Metenier</title>
+	<!-- Bootstrap 5 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="stylesheet" href="css/modern-styles.css">
+	<style>
+		.project-section {
+			padding-top: 120px;
+			padding-bottom: 40px;
+			background: linear-gradient(135deg, #080e24 0%, #1a1a2e 100%);
+			min-height: 100vh;
+		}
+		.project-card {
+			background: rgba(255,255,255,0.04);
+			border: 1px solid rgba(255,255,255,0.08);
+			border-radius: 1rem;
+			box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+			transition: transform 0.2s, box-shadow 0.2s;
+			height: 100%;
+		}
+		.project-card:hover {
+			transform: translateY(-6px) scale(1.02);
+			box-shadow: 0 8px 32px rgba(0,123,255,0.18);
+			border-color: var(--primary-color);
+		}
+		.project-card .card-title {
+			color: var(--primary-color);
+			font-size: 1.2rem;
+			font-weight: 600;
+		}
+		.project-card .card-text {
+			color: var(--text-muted);
+			font-size: 0.98rem;
+		}
+		.project-badge {
+			font-size: 0.85rem;
+			margin-right: 0.5rem;
+			background: var(--primary-color);
+			color: #fff;
+			border-radius: 0.5rem;
+			padding: 0.2rem 0.7rem;
+			font-weight: 500;
+		}
+		.project-link {
+			color: var(--primary-color);
+			text-decoration: none;
+			font-weight: 500;
+			transition: color 0.2s;
+		}
+		.project-link:hover {
+			color: #0056b3;
+			text-decoration: underline;
+		}
+		.category-title {
+			color: var(--primary-color);
+			margin-top: 2rem;
+			margin-bottom: 1rem;
+			font-size: 1.3rem;
+			font-weight: 700;
+			letter-spacing: 0.02em;
+		}
+		@media (max-width: 768px) {
+			.project-section { padding-top: 80px; }
+		}
+	</style>
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand fw-bold" href="index.html">
+				<i class="fas fa-code me-2"></i>Portfolio
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a class="nav-link" href="ecv.html">CV</a></li>
+					<li class="nav-item"><a class="nav-link active" href="projets.html" aria-current="page">Projets</a></li>
+					<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section class="project-section">
+		<div class="container">
+			<h1 class="text-center text-white mb-5">Mes Projets</h1>
+			<!-- Dépôts & Applications -->
+			<div class="category-title"><i class="fas fa-folder-open me-2"></i>Dépôts & Applications</div>
+			<div class="row g-4">
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">Android</span>
+							<h5 class="card-title">Suivi de vos frais</h5>
+							<p class="card-text">Application Android pour la gestion des frais professionnels.</p>
+							<a class="project-link" href="https://www.dropbox.com/scl/fo/akpnlyqtjucuuload73dh/AK9JyijSe-rlOVkDYwOnatE?rlkey=cg4ggrh05vxy4z1v7molgmohk&st=fknkcgkt&dl=0" target="_blank" rel="noopener">Voir sur Dropbox <i class="fas fa-external-link-alt ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">Web</span>
+							<h5 class="card-title">Portfolio Informatique (Bootstrap)</h5>
+							<p class="card-text">Site web de présentation de mon parcours et de mes compétences en Bootstrap.</p>
+							<a class="project-link" href="https://github.com/metenier73/PortfolioInfo.git" target="_blank" rel="noopener">Voir sur GitHub <i class="fab fa-github ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">React</span>
+							<h5 class="card-title">Portfolio Informatique (React)</h5>
+							<p class="card-text">Version React de mon portfolio informatique.</p>
+							<a class="project-link" href="https://github.com/metenier73/web.git" target="_blank" rel="noopener">Voir sur GitHub <i class="fab fa-github ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">Python</span>
+							<h5 class="card-title">Boîte à Outils pour Windows</h5>
+							<p class="card-text">Scripts Python pour l'automatisation et la gestion de tâches sous Windows.</p>
+							<a class="project-link" href="https://github.com/metenier73/pythonScript.git" target="_blank" rel="noopener">Voir sur GitHub <i class="fab fa-github ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">Django REST</span>
+							<h5 class="card-title">API GIEC (Rapport Climatique)</h5>
+							<p class="card-text">API pour la gestion et la consultation des rapports climatiques du GIEC.</p>
+							<a class="project-link" href="https://github.com/metenier73/GIEC.git" target="_blank" rel="noopener">Voir sur GitHub <i class="fab fa-github ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">Deep Learning</span>
+							<h5 class="card-title">Détection d'Émotions Faciales</h5>
+							<p class="card-text">Projet de détection d'émotions faciales à l'aide du Deep Learning.</p>
+							<a class="project-link" href="https://github.com/metenier73/D-tection-d-motions-faciales.git" target="_blank" rel="noopener">Voir sur GitHub <i class="fab fa-github ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">Galerie</span>
+							<h5 class="card-title">Galerie Photo</h5>
+							<p class="card-text">Sélection de photos personnelles et professionnelles.</p>
+							<a class="project-link" href="https://www.flickr.com/gp/ridesnow/Z8R7Ay" target="_blank" rel="noopener">Voir sur Flickr <i class="fas fa-external-link-alt ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Documentation numérique -->
+			<div class="category-title"><i class="fas fa-book me-2"></i>Documentation numérique</div>
+			<div class="row g-4">
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">Veille</span>
+							<h5 class="card-title">Veille technologique Java</h5>
+							<p class="card-text">Veille sur les dernières tendances et innovations Java.</p>
+							<a class="project-link" href="http://meteniermyriam.wixsite.com/veille" target="_blank" rel="noopener">Voir la veille <i class="fas fa-external-link-alt ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">Wiki</span>
+							<h5 class="card-title">Wikisupport</h5>
+							<p class="card-text">Page de support et documentation sur Wikipedia.</p>
+							<a class="project-link" href="https://fr.wikipedia.org/wiki/Utilisateur:Meteniermyriam/Brouillon" target="_blank" rel="noopener">Voir le Wiki <i class="fas fa-external-link-alt ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Sites & CMS -->
+			<div class="category-title"><i class="fas fa-globe me-2"></i>Sites & CMS</div>
+			<div class="row g-4">
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">CMS</span>
+							<h5 class="card-title">Portfolio Informatique</h5>
+							<p class="card-text">Site portfolio réalisé avec Wix.</p>
+							<a class="project-link" href="https://meteniermyriam.wixsite.com/portfolio" target="_blank" rel="noopener">Voir le site <i class="fas fa-external-link-alt ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">CMS</span>
+							<h5 class="card-title">RideSnow</h5>
+							<p class="card-text">Site dédié à la passion du ski et du snowboard.</p>
+							<a class="project-link" href="https://meteniermyriam.wixsite.com/snowride73" target="_blank" rel="noopener">Voir le site <i class="fas fa-external-link-alt ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">CMS</span>
+							<h5 class="card-title">Pizza Maison</h5>
+							<p class="card-text">Site de recettes et de partage autour de la pizza maison.</p>
+							<a class="project-link" href="https://meteniermyriam.wixsite.com/mapizza" target="_blank" rel="noopener">Voir le site <i class="fas fa-external-link-alt ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">CMS</span>
+							<h5 class="card-title">Monitrice Ski & Snowboard</h5>
+							<p class="card-text">Site professionnel pour mon activité de monitrice de ski et snowboard.</p>
+							<a class="project-link" href="https://soloist.ai/monitricedeskisnowboard" target="_blank" rel="noopener">Voir le site <i class="fas fa-external-link-alt ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Portfolios & Tests -->
+			<div class="category-title"><i class="fas fa-laptop-code me-2"></i>Portfolios & Tests</div>
+			<div class="row g-4">
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">Bootstrap</span>
+							<h5 class="card-title">Portfolio Informatique</h5>
+							<p class="card-text">Portfolio informatique réalisé avec Bootstrap et jQuery.</p>
+							<a class="project-link" href="https://metenier73.github.io/PortfolioInfo/" target="_blank" rel="noopener">Voir le site <i class="fas fa-external-link-alt ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">Bootstrap</span>
+							<h5 class="card-title">Portfolio Ski & Snowboard</h5>
+							<p class="card-text">Portfolio dédié à la montagne, au ski et au snowboard.</p>
+							<a class="project-link" href="https://metenier73.github.io/PortfolioSki/" target="_blank" rel="noopener">Voir le site <i class="fas fa-external-link-alt ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">Angular</span>
+							<h5 class="card-title">Projet Angular</h5>
+							<p class="card-text">Application web développée avec Angular.</p>
+							<a class="project-link" href="https://metenier73.github.io/snapface/" target="_blank" rel="noopener">Voir le site <i class="fas fa-external-link-alt ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">Test</span>
+							<h5 class="card-title">Test psychologique</h5>
+							<p class="card-text">Test psychologique interactif en ligne.</p>
+							<a class="project-link" href="http://metenier73.github.io/web/TestPsycho.html" target="_blank" rel="noopener">Voir le test <i class="fas fa-external-link-alt ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">Test</span>
+							<h5 class="card-title">Test Psy</h5>
+							<p class="card-text">Test en ligne sur les rêves et la psychologie.</p>
+							<a class="project-link" href="http://metenier73.github.io/web/test-reves.html" target="_blank" rel="noopener">Voir le test <i class="fas fa-external-link-alt ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card project-card h-100">
+						<div class="card-body">
+							<span class="project-badge">Windows</span>
+							<h5 class="card-title">Tronc Commun : montagne</h5>
+							<p class="card-text">Application Windows pour la gestion de contenus montagne.</p>
+							<a class="project-link" href="https://drive.google.com/file/d/1sTcMM2z91UTYmvBOm-A3sDM_1PTtcktk/view?usp=drive_link" target="_blank" rel="noopener">Télécharger <i class="fas fa-download ms-1"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer bg-dark text-light py-4 mt-5">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-6">
+					<p class="mb-0">&copy; 2024 Myriam Metenier. Tous droits réservés.</p>
+				</div>
+				<div class="col-md-6 text-md-end">
+					<a href="mailto:metenier@yahoo.fr" class="text-light text-decoration-none me-3" aria-label="Envoyer un email">
+						<i class="fas fa-envelope me-1"></i>Contact
+					</a>
+					<a href="https://www.linkedin.com/in/metenier-myriam-informatique" class="text-light text-decoration-none" target="_blank" rel="noopener" aria-label="Profil LinkedIn">
+						<i class="fab fa-linkedin me-1"></i>LinkedIn
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
