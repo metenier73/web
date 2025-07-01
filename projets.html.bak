@@ -161,7 +161,7 @@
 							<h6> <u>Site Web : </u></h6>
 							
 							
-							<li><a href="http://metenier73.github.io/web/TestPsycho.html" alt="Bootstrap" title="Test psychologique"
+							<li><a href="http://metenier73.github.io/web/TestPsycho.html" alt="Html & JavaScript" title="Test psychologique"
 									onclick="window.open(this.href);return false">Test psychologique</a></li>
 							<li><a href="http://metenier73.github.io/web/test-reves.html" alt="Html & JavaScript" title="Test psychologique"
 									onclick="window.open(this.href);return false">Test Psy</a></li>
