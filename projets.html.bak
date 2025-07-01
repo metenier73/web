@@ -82,19 +82,19 @@
 							</li>
 							<li>GitHub (<a href="https://github.com/metenier73/PortfolioInfo.git"
 									onclick="window.open(this.href);return false">Portfolio Informatique : Bootstrap</a>,
-							<li>	<a href="https://github.com/metenier73/web.git" 
-								 onclick="window.open(this.href);return false">Portfolio Informatique : React</a>,
+							<li> <a href="https://github.com/metenier73/web.git" 
+							 onclick="window.open(this.href);return false">Portfolio Informatique : React</a>,
 								<a href="https://github.com/metenier73/pythonScript.git"
 									onclick="window.open(this.href);return false" title="Script Python">Boite à Outils
 									pour Windows : Python</a>,
-									
+								
 								<a href="https://github.com/metenier73/GIEC.git"
 									onclick="window.open(this.href);return false" title="API GIEC avec Django REST Framework">API GIEC (Rapport Climatique) avec Django REST</a>,
-									
+								
 								<a href="https://github.com/metenier73/D-tection-d-motions-faciales.git"
 								onclick="window.open(this.href);return false" title="Détection d'Émotions Faciales avec Deep Learning">Détection d'Émotions Faciales avec Deep Learning</a>
-									
-									)
+								
+								)
 							</li>
 							<li>Galery (<a href="https://www.flickr.com/gp/ridesnow/Z8R7Ay"
 									onclick="window.open(this.href);return false">Photo </a>)</li>
@@ -136,6 +136,11 @@
 									onclick="window.open(this.href);return false">RideSnow</a></li>
 							<li><a href="https://meteniermyriam.wixsite.com/mapizza" title="Pizza maison"
 									onclick="window.open(this.href);return false">Pizza Maison</a></li>
+							
+							<li><a href="https://soloist.ai/monitricedeskisnowboard" title="Pizza maison"
+									onclick="window.open(this.href);return false">Site monitrice de ski & snowboard</a></li>		
+								
+								
 						</ul>
 						<ul>
 							<h6> <u>Portfolio : </u></h6>
@@ -152,20 +157,29 @@
 									onclick="window.open(this.href);return false">Projet Angular </a></li>
 
 							<li><a href="http://metenier73.github.io/web/TestPsycho.html" alt="Bootstrap" title="Test psychologique"
-								onclick="window.open(this.href);return false">Test psychologique</a></li>
-							
+									onclick="window.open(this.href);return false">Test psychologique</a></li>
+							<li><a href="http://metenier73.github.io/web/test-reves.html" alt="Bootstrap" title="Test psychologique"
+									onclick="window.open(this.href);return false">Test Psy</a></li>
 							<!-- <li><a href="http://mmetenier.free.fr/PortfolioInfo/" alt="Bootstrap" title="Portfolio informatique Bootstrap, jquery"
-								onclick="window.open(this.href);return false">Portfolio Informatique</a></li> -->
+									onclick="window.open(this.href);return false">Portfolio Informatique</a></li> -->
 
 							<!-- <li><a href="http://mmetenier.free.fr/PortfolioSki/" title="Portfolio ski Bootstrap, jquery"
-								onclick="window.open(this.href);return false">Portfolio ski & snowboard </a></li> -->
+									onclick="window.open(this.href);return false">Portfolio ski & snowboard </a></li> -->
 
 							<!-- <a href="http://maboutiqueperso/version%20finale/" title="Désolé pas encore en ligne " onclick="window.open(this.href);return false">Ma Boutique Perso </a><br/> -->
 
 							<!-- <a href="http://monappweb/" title="Désolé pas encore en ligne"  onclick="window.open(this.href);return false">Mon application web </a><br/> -->
 
 							<!-- <a href="http://gbs/" title="Désolé pas encore en ligne" onclick="window.open(this.href);return false"> GBS </a><br/> -->
+							
+							
+							<li><a href="https://metenier73.github.io/ski-booking-rendezvous/" alt="Site monitrice ski et snowboard"
+								title="Monitrice de ski & snowboard sûr l'espace Killy : Val d'isère - Tignes"
+									onclick="window.open(this.href);return false">Monitrice de ski & snowboard</a></li>
+
+
 						</ul>
+						
 						<ul>
 							<h6> <u> application Windows</u></h6>
 							<li><a href="https://drive.google.com/file/d/1sTcMM2z91UTYmvBOm-A3sDM_1PTtcktk/view?usp=drive_link" title="Tronc commun montagne 'Application Windows' "
@@ -177,40 +191,39 @@
 							<h6> <u>Projet Python : </u></h6>
 							<li><a href="https://github.com/metenier73/GIEC.git" title="Projet GIEC"
 									onclick="window.open(this.href);return false">API GIEC avec Django REST Framework</a></li>
-									
+							
 							<li><a href="https://github.com/metenier73/D-tection-d-motions-faciales.git" title="D-tection-d-motions-faciales"
 									onclick="window.open(this.href);return false">Détection d'Émotions Faciales avec Deep Learning</a></li>
 							<!--<li><a href="https://meteniermyriam.wixsite.com/mapizza" title="Pizza maison"
-						
-						</ul>  			onclick="window.open(this.href);return false">Pizza Maison</a></li>
-							-->
+					
+					</ul>  				onclick="window.open(this.href);return false">Pizza Maison</a></li>
+						-->
 				
-					<!---	<img src="image/dropboxInv.png" alt="Nous &eacute;crire" title="dropbox" width="200" height="200"
-									onemouseover ="this.src='dropBox.png'" onemouseout="this.src='image/dropboxInv.png'"
-								/></a><br /> <br /> <br />-->
+			<!--- <img src="image/dropboxInv.png" alt="Nous &eacute;crire" title="dropbox" width="200" height="200"
+						onemouseover ="this.src='dropBox.png'" onemouseout="this.src='image/dropboxInv.png'"
+					/></a><br /> <br /> <br />-->
 			
 
-				</div>
 			</div>
+		</div>
 
-				<div class="grid-container1">
-					<footer class="main_footer center_text ptb_2">
-						<p>&copy; - Author : metenier myriam
-							<a href="mailto:metenier@yahoo.fr">Ecrivez-moi !</a>
-						</p>
-					</footer>
-				</div>
+			<div class="grid-container1">
+				<footer class="main_footer center_text ptb_2">
+					<p>&copy; - Author : metenier myriam
+						<a href="mailto:metenier@yahoo.fr">Ecrivez-moi !</a>
+					</p>
+				</footer>
 			</div>
 		</div>
 	</div>
 		<script src="https://code.jquery.com/jquery-1.11.1.js" integrity="sha256-MCmDSoIMecFUw3f1LicZ/D/yonYAoHrgiep/3pCH9rw="
 			crossorigin="anonymous"></script>
-		
+	
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<script type="text/javascript">< !--//-->
 		< ![CDATA[//><!--
-					function afficheMenu(obj) { var idMenu = obj.id; var idSousMenu = 'sous' + idMenu; var sousMenu = document.getElementById(idSousMenu); /*****************************************************/ /** si le sous-menu correspondant au menu cliqué **/ /** est caché alors on l'affiche, sinon on le cache **/ /*****************************************************/ if (sousMenu.style.display == "none") { sousMenu.style.display = "block"; } else { sousMenu.style.display = "none"; } }//--><!]]>
+				function afficheMenu(obj) { var idMenu = obj.id; var idSousMenu = 'sous' + idMenu; var sousMenu = document.getElementById(idSousMenu); /*****************************************************/ /** si le sous-menu correspondant au menu cliqué **/ /** est caché alors on l'affiche, sinon on le cache **/ /*****************************************************/ if (sousMenu.style.display == "none") { sousMenu.style.display = "block"; } else { sousMenu.style.display = "none"; } }//--><!]]>
 		</script>
 		
 	</body>
