@@ -161,9 +161,9 @@
 							<h6> <u>Site Web : </u></h6>
 							
 							
-							<li><a href="http://metenier73.github.io/web/TestPsycho.html" alt="Html & JavaScript" title="Test psychologique"
+							<li><a href="http://metenier73.github.io/web/TestPsycho.html" alt="Html & JavaScript" title="Test psychologique : Html & JavaScript"
 									onclick="window.open(this.href);return false">Test psychologique</a></li>
-							<li><a href="http://metenier73.github.io/web/test-reves.html" alt="Html & JavaScript" title="Test psychologique"
+							<li><a href="http://metenier73.github.io/web/test-reves.html" alt="Html & JavaScript" title="Test psychologique : Html & JavaScript"
 									onclick="window.open(this.href);return false">Test Psy</a></li>
 							<!-- <li><a href="http://mmetenier.free.fr/PortfolioInfo/" alt="Bootstrap" title="Portfolio informatique Bootstrap, jquery"
 									onclick="window.open(this.href);return false">Portfolio Informatique</a></li> -->
