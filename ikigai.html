@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ikigai - Diagramme de Venn Interactif</title>
+
+  <!-- D3.js pour la manipulation du DOM -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Venn.js pour les diagrammes de Venn -->
+  <script src="https://cdn.jsdelivr.net/npm/venn.js@0.2.20/venn.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .inputs {
+      margin-top: 30px;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 20px;
+      display: block;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .venn-container {
+      margin-top: 40px;
+      text-align: center;
+    }
+    #description {
+      margin-top: 20px;
+      font-size: 18px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      min-height: 100px; /* Pour éviter le saut de contenu */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .venn-area path {
+      fill-opacity: 0.6;
+      stroke-width: 2;
+      stroke: #fff;
+    }
+    .venn-area.active path {
+      fill-opacity: 0.8;
+      stroke: #333;
+    }
+    .venn-circle text {
+      fill: #333;
+      font-weight: bold;
+    }
+    .venn-intersection text {
+      fill: #fff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Découvrez votre Ikigai avec un Diagramme de Venn</h1>
+
+    <div class="inputs">
+      <label for="passion">1. Ce que vous aimez (Passion) :</label>
+      <input type="text" id="passion" placeholder="Exemples : coder, voyager, peindre...">
+      
+      <label for="vocation">2. Ce pour quoi vous êtes bon (Vocation) :</label>
+      <input type="text" id="vocation" placeholder="Exemples : résoudre des problèmes, enseigner, écouter...">
+      
+      <label for="mission">3. Ce dont le monde a besoin (Mission) :</label>
+      <input type="text" id="mission" placeholder="Exemples : améliorer l'éducation, lutter contre la pauvreté...">
+      
+      <label for="profession">4. Ce pour quoi vous pouvez être payé (Profession) :</label>
+      <input type="text" id="profession" placeholder="Exemples : consultant, enseignant, développeur...">
+      
+      <button id="updateBtn">Mettre à jour le diagramme</button>
+    </div>
+
+    <div class="venn-container">
+      <svg id="venn" width="600" height="400"></svg>
+    </div>
+
+    <div id="description">
+      <p>Cliquez sur les zones du diagramme pour en savoir plus sur chaque domaine de l'Ikigai.</p>
+    </div>
+  </div>
+
+  <script>
+    const sets = [
+      { sets: ["passion"], size: 12, label: "Ce que vous aimez", color: "#FF6347" }, // Tomato
+      { sets: ["vocation"], size: 12, label: "Ce pour quoi vous êtes bon", color: "#4682B4" }, // SteelBlue
+      { sets: ["mission"], size: 12, label: "Ce dont le monde a besoin", color: "#32CD32" }, // LimeGreen
+      { sets: ["profession"], size: 12, label: "Ce pour quoi vous pouvez être payé", color: "#FFD700" }, // Gold
+
+      // Intersections de deux
+      { sets: ["passion", "vocation"], size: 2, label: "Passion + Vocation = Ce que vous aimez faire et ce pour quoi vous êtes bon (Plaisir et Compétence)" },
+      { sets: ["vocation", "mission"], size: 2, label: "Vocation + Mission = Ce pour quoi vous êtes bon et ce dont le monde a besoin (Utilité et Compétence)" },
+      { sets: ["mission", "profession"], size: 2, label: "Mission + Profession = Ce dont le monde a besoin et ce pour quoi vous pouvez être payé (Valeur et Rémunération)" },
+      { sets: ["profession", "passion"], size: 2, label: "Profession + Passion = Ce pour quoi vous pouvez être payé et ce que vous aimez (Carrière et Plaisir)" },
+
+      // Intersections de trois
+      { sets: ["passion", "vocation", "mission"], size: 1, label: "Passion + Vocation + Mission = Votre Vocation (Ce que vous aimez, ce pour quoi vous êtes bon, et ce dont le monde a besoin)" },
+      { sets: ["vocation", "mission", "profession"], size: 1, label: "Vocation + Mission + Profession = Votre Profession (Ce pour quoi vous êtes bon, ce dont le monde a besoin, et ce pour quoi vous pouvez être payé)" },
+      { sets: ["mission", "profession", "passion"], size: 1, label: "Mission + Profession + Passion = Votre Mission (Ce dont le monde a besoin, ce pour quoi vous pouvez être payé, et ce que vous aimez)" },
+      { sets: ["profession", "passion", "vocation"], size: 1, label: "Profession + Passion + Vocation = Votre Passion (Ce pour quoi vous pouvez être payé, ce que vous aimez, et ce pour quoi vous êtes bon)" },
+
+      // Intersection de quatre (Ikigai)
+      { sets: ["passion", "vocation", "mission", "profession"], size: 0.5, label: "IKIGAI : Ce que vous aimez, ce pour quoi vous êtes bon, ce dont le monde a besoin, et ce pour quoi vous pouvez être payé. Le sens de votre vie !" }
+    ];
+
+    function drawVennDiagram() {
+      const chart = venn.VennDiagram()
+        .width(600)
+        .height(400);
+
+      const svg = d3.select("#venn").datum(sets).call(chart);
+
+      svg.selectAll(".venn-circle")
+        .on("click", function(event, d) {
+          const descriptionDiv = document.getElementById("description");
+          descriptionDiv.innerHTML = `<p><strong>${d.label}</strong></p>`;
+          svg.selectAll(".venn-area").classed("active", false);
+          d3.select(this.parentNode).classed("active", true);
+        });
+
+      svg.selectAll(".venn-intersection")
+        .on("click", function(event, d) {
+          const descriptionDiv = document.getElementById("description");
+          descriptionDiv.innerHTML = `<p><strong>${d.label}</strong></p>`;
+          svg.selectAll(".venn-area").classed("active", false);
+          d3.select(this).classed("active", true);
+        });
+
+      // Initialiser la description
+      document.getElementById("description").innerHTML = 
+        "<p>Cliquez sur les zones du diagramme pour en savoir plus sur chaque domaine de l'Ikigai.</p>";
+    }
+
+    // La fonction updateVennDiagram n'est plus nécessaire pour la logique de dessin
+    // Elle peut être utilisée pour déclencher un redessin si les données changent dynamiquement
+    function updateVennDiagram() {
+      // Pour l'instant, les entrées texte ne modifient pas le diagramme de Venn.js directement.
+      // Elles peuvent être utilisées pour filtrer ou mettre en évidence des sections si la logique est ajoutée.
+      // Pour un diagramme de Venn dynamique basé sur les entrées, une logique plus complexe serait nécessaire.
+      // Ici, le bouton sert principalement à redessiner le diagramme si des modifications sont apportées aux 'sets' en JS.
+      drawVennDiagram();
+    }
+
+    // Dessiner le diagramme au chargement initial
+    drawVennDiagram();
+
+    // Ajouter l'événement pour mettre à jour le diagramme (peut être utilisé pour rafraîchir)
+    document.getElementById("updateBtn").addEventListener("click", updateVennDiagram);
+  </script>
+
+</body>
