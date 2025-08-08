@@ -143,7 +143,7 @@
 								
 						</ul>
 						<ul>
-							<h6> <u>Portfolio : </u></h6>
+							<h6> <u>Site Web : </u></h6>
 
 							<li><a href="https://metenier73.github.io/PortfolioInfo/" alt="Bootstrap"
 									title="Portfolio informatique Bootstrap, jquery"
@@ -152,15 +152,11 @@
 							<li><a href="https://metenier73.github.io/PortfolioSki/"
 									title="Portfolio ski Bootstrap, jquery"
 									onclick="window.open(this.href);return false">Portfolio ski & snowboard </a></li>
-
+							
 							<li><a href="https://metenier73.github.io/snapface/" title="Projet Angular"
-									onclick="window.open(this.href);return false">Snapface - flore montagne </a></li>
-
-						</ul>
-						<ul>
-							<h6> <u>Site Web : </u></h6>
-							
-							
+									onclick="window.open(this.href);return false">Snapface - flore montagne </a>
+							</li>
+						
 							<li><a href="http://metenier73.github.io/web/TestPsycho.html" alt="Html & JavaScript" title="Test psychologique : Html & JavaScript"
 									onclick="window.open(this.href);return false">Test psychologique</a></li>
 							<li><a href="http://metenier73.github.io/web/test-reves.html" alt="Html & JavaScript" title="Test psychologique : Html & JavaScript"
@@ -179,15 +175,17 @@
 							
 							
 							<li><a href="https://ski-booking-rendezvous.lovable.app" alt="Site monitrice ski et snowboard sûr l'espace Killy"
-								title="Lovable.dev - IA"
-									onclick="window.open(this.href);return false">Monitrice de ski & snowboard : Fr / En</a>
-							</li
-							
-							<li><a href="https://soloist.ai/monitricedeskisnowboard" alt="Site monitrice ski et snowboard sûr l'espace Killy"
-								title="Lovable.dev - IA"
-									onclick="window.open(this.href);return false">Monitrice de ski & snowboard </a>
+								title="Lovable.dev - IA" onclick="window.open(this.href);return false">Monitrice de ski & snowboard</a>
 							</li>
 							
+							<li><a href="https://ajnvlngh.manus.space/" alt="Site explication IA"
+								title="Lovable.dev - IA" onclick="window.open(this.href);return false">Intellignece Artificielle</a>
+							</li>
+
+							</li>
+						
+							
+
 
 
 						</ul>
