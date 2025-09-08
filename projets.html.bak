@@ -161,10 +161,10 @@
 									onclick="window.open(this.href);return false">psychologie </a></li>
 							
 							<li><a href="ikigai.html" alt="Html & JavaScript" title="Trouver le job de ses rêves : Html & JavaScript"
-									onclick="window.open(this.href);return false">psychologie </a></li>
+									onclick="window.open(this.href);return false">Trouver le job de ses rêves </a></li>
 							
-							<!-- <li><a href="http://mmetenier.free.fr/PortfolioInfo/" alt="Bootstrap" title="Portfolio informatique Bootstrap, jquery"
-									onclick="window.open(this.href);return false">Portfolio Informatique</a></li> -->
+						 <li><a href="https://metenier73.github.io/ski-snowboard-tignes-valdisere/" title="site monitrice de ski et snowboard"
+				onclick="window.open(this.href);return false">Monitrice de ski & SnowBoard : Fr / En / Es</a>	</li> 
 
 							<!-- <li><a href="http://mmetenier.free.fr/PortfolioSki/" title="Portfolio ski Bootstrap, jquery"
 									onclick="window.open(this.href);return false">Portfolio ski & snowboard </a></li> -->
