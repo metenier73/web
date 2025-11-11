@@ -33,7 +33,7 @@
 	<title>CV électronique</title>
 	<style type="text/css">
 		body {
- display: flex;
+
 			padding-top: auto;
 		}
 
@@ -99,7 +99,7 @@
 
 								<a href="images/AlternanceIngenieurIA.pdf">
 									<img src="images/MIMI.jpg" alt="Cv Developpeur" class="img-rounded" />
-									<h6>Formation en cours "AI Engineer"</h6>
+									<h6>Formation en cours "Pentest"</h6>
 								</a>
 								</br>
 							</div>
@@ -114,7 +114,7 @@
 								<ul> Tel : (+33)7 68 10 61 07</ul> </br></br></br></br></br></br>
 								<ul> Mail : <a href="mailto:meteniermyriam@yahoo.fr">meteniermyriam@yahoo.fr</a>
 								</ul> </br>
-								<ul> <a href="https://www.linkedin.com/in/metenier-myriam-informatique">linkedin</a>
+								<ul> <a href="https://www.linkedin.com/in/metenier-informatique">linkedin</a>
 								</ul>
 							</div>
 						</div>
