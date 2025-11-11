@@ -404,7 +404,7 @@
 					<li>Brevet Educateur Sportif Ski Alpin 1° 2010.</li>
 					<li>B.A.F.A & B.N.S 1989.</li>
 
-					<a href="https://openclassrooms.com/fr/dashboard/courses"
+					<a href="https://openclassrooms.com/fr/dashboard/courses#course-certificates"target="_blank"
 						onclick="window.open(this.href);return false">
 						OpenClassrooms</a>
 					</br></br>
