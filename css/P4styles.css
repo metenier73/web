@@ -24,21 +24,21 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-tablet) {
   .container {
-    grid-template-columns: 100%;
+    grid-template-columns: auto;
   }
 }
 
 /* Medium devices (tablets, 992px and up) */
 @media (min-width: @screen-desktop) {
   .container {
-    grid-template-columns: 100%;
+    grid-template-columns: auto;
   }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: @screen-large-desktop) {
   .container {
-    grid-template-columns: 100%;
+    grid-template-columns: auto;
   }
 }
 
@@ -105,8 +105,8 @@ div {
 html {
   background: #888888; /*#FFFF;*/
   overflow: auto;
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: auto;
   width: auto;
   text-align: center;
   padding-top: 100px;
@@ -189,6 +189,14 @@ body {
   border: 5px solid #424242;
 }
 
+header { */
+    text-align:center;
+	font-family: Helvetica, Arial, sans-serif ;
+	font-size:12px  ;  
+	padding-bottom:auto;
+
+}
+
 h1 {
   font-family: "cac_champagneregular", Helvetica, Arial, sans-serif;
   color: #424242;
@@ -265,7 +273,7 @@ img {
 }
 
 ul li a:hover {
-  color: #888888;
+  color: #0033FF;
   background: transparent url("image/hmenu-sel.jpg") repeat-x top right;
 }
 

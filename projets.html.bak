@@ -17,16 +17,21 @@
 	<style type="text/css">
 			body {
 
-			margin-top: -95px;
+			margin-top: -90px;
 		}
 
 
-		[class*="col-"] {
+			[class*="col-"] {
 			margin-bottom: 15px;
 		}
 
 		img {
-			width: 30%;
+			width: 20%;
+			background: rgba(0, 123, 255, 0.1);
+			border: 1px solid rgba(0, 123, 255, 0.2);
+			border-radius: 10px;
+			padding: 0.5rem;
+			margin: 0.5rem;
 			
 		}
 
@@ -48,7 +53,6 @@
 <body>
 
 	<header>
-	
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -71,9 +75,7 @@
 			<!--/.nav-collapse -->
 		</div>
 	</nav>
-		
-		
-	</header>
+</header>
 	<div id="grid">
 		<div class="container">
 			<div class="row">

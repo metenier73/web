@@ -32,9 +32,9 @@
 	</script>
 	<title>CV électronique</title>
 	<style type="text/css">
-		body {
+			body {
 
-			padding-top: auto;
+			margin-top: -95px;
 		}
 
 
@@ -67,6 +67,7 @@
 		}
 	</style>
 </head>
+<body>
 <header>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
@@ -92,7 +93,7 @@
 	</nav>
 </header>
 
-<body>
+
 
 	<div id="grid">
 		<div class="container">
