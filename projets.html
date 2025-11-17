@@ -15,21 +15,28 @@
 	<link rel="stylesheet" href="css/cacchampagne/stylesheet.css" type="text/css" />
 	<title>CV électronique</title>
 	<style type="text/css">
-		body {
-			margin-top: -100px;
-			padding: -5px;
+			body {
+
+			margin-top: -95px;
 		}
 
-		[class*="col-"] {
-			margin-bottom: 5px;
+
+			[class*="col-"] {
+			margin-bottom: 15px;
 		}
 
 		img {
 			width: 20%;
+			background: rgba(0, 123, 255, 0.1);
+			border: 1px solid rgba(0, 123, 255, 0.2);
+			border-radius: 10px;
+			padding: 0.5rem;
+			margin: 0.5rem;
+			
 		}
 
 		.container {
-			margin-left: auto;
+			margin-left: 80px;
 		}
 
 		a:active,
@@ -39,35 +46,36 @@
 
 		.inline-form input {
 			display: inline-block;
-			width: 100%;
+			width: auto;
 		}
 	</style>
 </head>
 <body>
+
 	<header>
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-						aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index.html">Portfolio</a>
-				</div>
-				<div id="navbar" class="collapse navbar-collapse">
-					<ul class="nav navbar-nav">
-						<li><a href="ecv.html">Ecv</a></li>
-						<li class="active"><a href="projets.html">Projets</a></li>
-						<li><a href="contact.html">Commentaire</a></li>
-					</ul>
-				</div>
-				<!--/.nav-collapse -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+					aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Portfolio</a>
 			</div>
-		</nav>
-	</header>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="ecv.html">Ecv</a></li>
+					<li><a href="projets.html">Projets</a></li>
+					<li><a href="contact.html">Commentaire</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+</header>
 	<div id="grid">
 		<div class="container">
 			<div class="row">
@@ -137,18 +145,18 @@
 							<li><a href="https://meteniermyriam.wixsite.com/mapizza" title="Pizza avec Wix"
 									onclick="window.open(this.href);return false">Pizza Maison</a></li>
 							
+							<h6> <u>CMS avec IA : </u></h6>
 							<li><a href="https://soloist.ai/monitricedeskisnowboard" title="Portfolio monitrice de ski et snowboard avec Soloist"
 									onclick="window.open(this.href);return false">Site monitrice de ski & snowboard</a></li>		
-								
+							<li><a href="https://ski-booking-rendezvous.lovable.app" alt="Site monitrice ski et snowboard sûr l'espace Killy"
+								title="Lovable.dev - IA" onclick="window.open(this.href);return false">Monitrice de ski & snowboard</a>
+							</li>	
 								
 						</ul>
 						<ul>
-							<h6> <u>Site Web IA : </u></h6>
+							<h6> <u>Programmation Web avec IA : </u></h6>
 							<li><a href="https://afbrkuwm.manus.space/" alt="Html & JavaScript" title="Test psychologique : Html & JavaScript"
 									onclick="window.open(this.href);return false">psychologie </a>
-							</li>
-							<li><a href="https://ski-booking-rendezvous.lovable.app" alt="Site monitrice ski et snowboard sûr l'espace Killy"
-								title="Lovable.dev - IA" onclick="window.open(this.href);return false">Monitrice de ski & snowboard</a>
 							</li>
 							
 							<li><a href="https://ajnvlngh.manus.space/" alt="Site explication IA"
@@ -156,7 +164,7 @@
 							</li>
 						</ul>
 						<ul>
-							<h6> <u>Site Web : </u></h6>
+							<h6> <u>Programmation Web Front-End : </u></h6>
 
 							<li><a href="https://metenier73.github.io/PortfolioInfo/" alt="Bootstrap"
 									title="Portfolio informatique Bootstrap, jquery"
@@ -191,6 +199,17 @@
 						</ul>
 						
 						<ul>
+							<h6> <u>Programmation Web Full-Stack : </u></h6>
+							
+							<li><a href="https://192.168.1.166:477/" alt="BoutiquePerso"
+									title="BoutiquePerso, Html, JavaScript, Mysql, PhpMyadmin"
+									onclick="window.open(this.href);return false">BoutiquePerso</a></li>
+						
+						
+						
+						</ul>
+						
+						<ul>
 							<h6> <u> Application Windows</u></h6>
 							<li><a href="https://drive.google.com/file/d/1sTcMM2z91UTYmvBOm-A3sDM_1PTtcktk/view?usp=drive_link" title="Application Windows avec Windev "
 									onclick="window.open(this.href);return false">Tronc Commun : montagne</a></li>
@@ -199,11 +218,11 @@
 
 						</ul>
 						<ul>
-							<h6> <u>Projet Python : </u></h6>
+							<h6> <u>Projet IA : </u></h6>
 							<li><a href="https://github.com/metenier73/GIEC.git" title="Projet GIEC avec Django Rest Framework"
 									onclick="window.open(this.href);return false">API GIEC</a></li>
 							
-							<li><a href="https://github.com/metenier73/D-tection-d-motions-faciales.git" title="D-tection-d-motions-faciales"
+							<li><a href="https://github.com/metenier73/D-tection-d-motions-faciales.git" title="D-tection-d-motions-faciales en Python"
 									onclick="window.open(this.href);return false">Détection d'Émotions Faciales avec Deep Learning</a>
 							</li>
 							<!--<li><a href="https://meteniermyriam.wixsite.com/mapizza" title="Pizza maison"

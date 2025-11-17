@@ -20,7 +20,7 @@
 /* No media query since this is the default in Bootstrap */
 @media (min-width: @screen-phones) {
   .grid-container {
-	grid-template-columns: 1fr ;
+	grid-template-columns: auto ;
 	}
 
 	
@@ -28,24 +28,21 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-tablet) {
   .grid-container {
-  
-	grid-template-columns: 100%;
+	grid-template-columns: auto;
   }
 }
 
 /* Medium devices (tablets, 992px and up) */
 @media (min-width: @screen-desktop) {
   .grid-container {
-   
-	grid-template-columns: 100%;
+	grid-template-columns: auto;
   }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: @screen-large-desktop) {
   .grid-container {
-    
-	grid-template-columns: 100%;
+	grid-template-columns: auto;
   }
 }
 
@@ -60,7 +57,7 @@
 .container {
   display:grid;
   margin: 2rem ;
-  padding: 1.5rem 1.5rem 0 1.5rem;
+  padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.1rem solid transparent; 
   margin-bottom:-60px;
   
@@ -139,12 +136,12 @@ a:link, a:visited {
 
 a:active /* Quand le visiteur clique sur le lien */
 {
-    background-color: blink;
+    background-color: #0033FF;
 	
 }
 
 a:hover {
-	color:#888888;
+	color:#0033FF;
 	text-decoration:underline;
 	transform : scale(1.5);
 	transition: transform 400ms;
@@ -156,10 +153,10 @@ a:hover {
 
 
 header { */
-   text-align:center;
+    text-align:center;
 	font-family: Helvetica, Arial, sans-serif ;
 	font-size:12px  ;  
-	padding-bottom:0px;
+	padding-bottom:auto;
 
 }
 
@@ -364,9 +361,8 @@ nav {
 
 
 
-
  ul li a:hover{
-	color:#888888;
+	color:#0033FF;
 	background:transparent url("image/hmenu-sel.jpg") repeat-x top right
 }
 	
