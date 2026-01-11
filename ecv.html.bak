@@ -32,9 +32,9 @@
 	</script>
 	<title>CV électronique</title>
 	<style type="text/css">
-			body {
+		body {
 
-			margin-top: -95px;
+			padding-top: auto;
 		}
 
 
