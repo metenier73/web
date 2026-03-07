@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Ikigai AI – Career Intelligence</title>
+
+<link rel="stylesheet" href="styleikigai12.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<style>
+
+body{
+font-family: "Inter",sans-serif;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
+margin:0;
+padding:30px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:30px;
+background:rgba(255,255,255,0.05);
+border-radius:20px;
+backdrop-filter:blur(15px);
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
+}
+
+h1{
+text-align:center;
+font-size:36px;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#cbd5f5;
+margin-bottom:40px;
+}
+
+.inputs{
+display:grid;
+gap:18px;
+}
+
+label{
+font-weight:600;
+}
+
+input{
+padding:12px;
+border-radius:10px;
+border:none;
+background:rgba(255,255,255,0.08);
+color:white;
+font-size:15px;
+}
+
+input:focus{
+outline:none;
+box-shadow:0 0 10px #38bdf8;
+}
+
+button{
+margin-top:10px;
+padding:14px;
+border:none;
+border-radius:12px;
+font-size:16px;
+font-weight:600;
+background:linear-gradient(135deg,#38bdf8,#6366f1);
+color:white;
+cursor:pointer;
+transition:0.25s;
+}
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+
+.venn-container{
+margin-top:40px;
+display:flex;
+justify-content:center;
+}
+
+#venn{
+width:100%;
+max-width:650px;
+height:420px;
+}
+
+#description{
+margin-top:30px;
+padding:20px;
+border-radius:12px;
+background:rgba(255,255,255,0.08);
+font-size:18px;
+text-align:center;
+min-height:80px;
+}
+
+.venn-area path{
+stroke:white;
+stroke-width:2;
+fill-opacity:0.55;
+transition:all .3s;
+filter:drop-shadow(0 0 10px rgba(255,255,255,0.2));
+}
+
+.venn-area:hover path{
+fill-opacity:0.9;
+filter:drop-shadow(0 0 18px rgba(255,255,255,0.8));
+}
+
+.venn-area.active path{
+stroke:#fff;
+stroke-width:3;
+filter:drop-shadow(0 0 20px #fff);
+}
+
+.venn-circle text{
+fill:white;
+font-weight:600;
+}
+
+@media(max-width:700px){
+
+body{
+padding:10px;
+}
+
+.container{
+padding:20px;
+}
+
+h1{
+font-size:26px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Ikigai AI Dashboard</h1>
+<p>Plateforme intelligente d'orientation carrière</p>
+
+</header>
+
+<section class="ikigai">
+
+<h2>Ton Ikigai</h2>
+
+<input id="passion" placeholder="Ce que tu aimes">
+<input id="talent" placeholder="Tes talents">
+<input id="mission" placeholder="Ce dont le monde a besoin">
+<input id="income" placeholder="Pour quoi tu peux être payé">
+
+</section>
+
+<section>
+
+<h2>Test psychologique Big Five</h2>
+
+<div id="bigFiveTest"></div>
+
+<button onclick="analysePersonality()">Analyser personnalité</button>
+
+<div id="personalityResult"></div>
+
+</section>
+
+<section>
+
+<h2>Matching métiers</h2>
+
+<div id="jobs"></div>
+
+</section>
+
+<section>
+
+<h2>Prévision salaire</h2>
+
+<canvas id="salaryChart"></canvas>
+
+</section>
+
+<section>
+
+<h2>Pays avec opportunités</h2>
+
+<div id="map"></div>
+
+</section>
+
+<section>
+
+<h2>Plan de carrière généré par IA</h2>
+
+<button onclick="generateCareer()">Générer plan carrière</button>
+
+<div id="career"></div>
+
+</section>
+
+<script>
+
+const bigFiveQuestions=[
+
+"Je suis sociable",
+"Je suis organisé",
+"Je suis curieux intellectuellement",
+"Je suis empathique",
+"Je gère bien le stress"
+
+]
+
+const container=document.getElementById("bigFiveTest")
+
+bigFiveQuestions.forEach((q,i)=>{
+
+container.innerHTML+=`
+
+<div class="question">
+
+<p>${q}</p>
+
+<select id="q${i}">
+
+<option value="1">Pas du tout</option>
+<option value="2">Un peu</option>
+<option value="3">Moyen</option>
+<option value="4">Beaucoup</option>
+<option value="5">Énormément</option>
+
+</select>
+
+</div>
+
+`
+
+})
+
+let personalityScore=0
+
+function analysePersonality(){
+
+personalityScore=0
+
+bigFiveQuestions.forEach((q,i)=>{
+
+personalityScore+=parseInt(document.getElementById("q"+i).value)
+
+})
+
+document.getElementById("personalityResult").innerHTML=
+"Score personnalité : "+personalityScore
+
+matchJobs()
+
+simulateSalary()
+
+initMap()
+
+}
+
+const jobsDatabase=[
+
+{job:"Software Developer",salary:{US:90000,FR:50000,DE:65000}},
+{job:"Data Scientist",salary:{US:100000,FR:60000,DE:70000}},
+{job:"UX Designer",salary:{US:85000,FR:45000,DE:60000}},
+{job:"AI Engineer",salary:{US:120000,FR:65000,DE:75000}},
+{job:"Product Manager",salary:{US:110000,FR:60000,DE:80000}}
+
+]
+
+function matchJobs(){
+
+let html="<h3>Jobs compatibles</h3>"
+
+jobsDatabase.forEach(j=>{
+
+html+=j.job+"<br>"
+
+})
+
+document.getElementById("jobs").innerHTML=html
+
+}
+
+function simulateSalary(){
+
+const ctx=document.getElementById("salaryChart")
+
+const dataUS=[]
+const dataFR=[]
+
+let baseUS=60000
+let baseFR=35000
+
+for(let i=0;i<10;i++){
+
+baseUS*=1.05
+baseFR*=1.04
+
+dataUS.push(Math.round(baseUS))
+dataFR.push(Math.round(baseFR))
+
+}
+
+new Chart(ctx,{
+
+type:"line",
+
+data:{
+
+labels:[...Array(10).keys()],
+
+datasets:[
+
+{
+label:"USA",
+data:dataUS,
+borderColor:"blue"
+},
+
+{
+label:"France",
+data:dataFR,
+borderColor:"red"
+}
+
+]
+
+}
+
+})
+
+}
+
+function initMap(){
+
+const map=L.map('map').setView([40,0],2)
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map)
+
+const countries={
+
+USA:[37,-95],
+France:[46,2],
+Germany:[51,10]
+
+}
+
+Object.keys(countries).forEach(c=>{
+
+L.marker(countries[c]).addTo(map)
+.bindPopup(c)
+
+})
+
+}
+
+async function generateCareer(){
+
+let passion=document.getElementById("passion").value
+let talent=document.getElementById("talent").value
+let mission=document.getElementById("mission").value
+
+const prompt=
+"Construis un plan de carrière détaillé sur 10 ans pour quelqu'un qui aime "+
+passion+" et qui est doué pour "+talent+" pour aider "+mission
+
+const response=await fetch("https://api.openai.com/v1/chat/completions",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json",
+"Authorization":"Bearer YOUR_API_KEY"
+},
+
+body:JSON.stringify({
+
+model:"gpt-4o-mini",
+
+messages:[{role:"user",content:prompt}]
+
+})
+
+})
+
+const data=await response.json()
+
+document.getElementById("career").innerHTML=
+data.choices[0].message.content
+
+}
+
+</script>
+
+</body>
+
+</html>
